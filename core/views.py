@@ -27,7 +27,16 @@ from django.views.decorators.http import require_POST
 @require_POST
 def submit_lead(request):
     name = request.POST.get('name', '')
-    phone = request.POST.get('phone', '')
+    raw_phone = request.POST.get('phone', '')
+    # Normalize phone: extract only digits
+    import re
+    clean_phone = re.sub(r'\D', '', raw_phone)
+    # Remove leading 998 if present
+    if clean_phone.startswith('998') and len(clean_phone) == 12:
+        clean_phone = clean_phone[3:]
+    
+    phone = clean_phone if clean_phone else raw_phone
+
     message_text = request.POST.get('message', '')
     
     settings = SiteSettings.objects.first()
