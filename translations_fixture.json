@@ -1,0 +1,1271 @@
+[
+{
+    "model": "core.translationmessage",
+    "pk": 1,
+    "fields": {
+        "key": "osonsayt_sayt_dlya_vashego_biz",
+        "ru_value": "osonSAYT — Сайт для вашего бизнеса за $200/год | Домен, хостинг и админ-панель включены",
+        "uz_value": "osonSAYT — Biznesingiz uchun yiliga $200 ga sayt | Domen, xosting va admin-panel kiritilgan"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 2,
+    "fields": {
+        "key": "shablony",
+        "ru_value": "Шаблоны",
+        "uz_value": "Shablonlar"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 3,
+    "fields": {
+        "key": "tseny",
+        "ru_value": "Цены",
+        "uz_value": "Narxlar"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 4,
+    "fields": {
+        "key": "kak_eto_rabotaet",
+        "ru_value": "Как это работает",
+        "uz_value": "Bu qanday ishlaydi"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 5,
+    "fields": {
+        "key": "zakazat_sayt",
+        "ru_value": "Заказать сайт",
+        "uz_value": "Saytga buyurtma berish"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 6,
+    "fields": {
+        "key": "podklyucheno_bolee_120_bizneso",
+        "ru_value": "Подключено более 120 бизнесов",
+        "uz_value": "120 dan ortiq biznes ulangan"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 7,
+    "fields": {
+        "key": "sayt_dlya_vashego_biznesa",
+        "ru_value": "Сайт для вашего бизнеса",
+        "uz_value": "Biznesingiz uchun sayt"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 8,
+    "fields": {
+        "key": "200_v_god",
+        "ru_value": "$200 в год",
+        "uz_value": "Yiliga $200"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 9,
+    "fields": {
+        "key": "domen",
+        "ru_value": "— домен,",
+        "uz_value": "— domen,"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 10,
+    "fields": {
+        "key": "hosting_i_adminpanel",
+        "ru_value": "хостинг и админ-панель",
+        "uz_value": "xosting va admin-panel"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 11,
+    "fields": {
+        "key": "vklyucheny",
+        "ru_value": "включены",
+        "uz_value": "kiritilgan"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 12,
+    "fields": {
+        "key": "vyberite_gotovyy_shablon_otpra",
+        "ru_value": "Выберите готовый шаблон, отправьте нам содержание — и через 3 дня ваш сайт уже работает. Без скрытых платежей, без блокировки, с полным правом владения кодом.",
+        "uz_value": "Tayyor shablonni tanlang, ma'lumotlarni bizga yuboring — va 3 kundan so'ng saytingiz ishga tushadi. Yashirin to'lovlarsiz, blokirovkasiz va kodga to'liq egalik huquqi bilan."
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 13,
+    "fields": {
+        "key": "smotret_shablony",
+        "ru_value": "Смотреть шаблоны",
+        "uz_value": "Shablonlarni ko'rish"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 14,
+    "fields": {
+        "key": "bez_predoplaty",
+        "ru_value": "Без предоплаты",
+        "uz_value": "Oldindan to'lovsiz"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 15,
+    "fields": {
+        "key": "gotovo_za_3_dnya",
+        "ru_value": "Готово за 3 дня",
+        "uz_value": "3 kunda tayyor"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 16,
+    "fields": {
+        "key": "adminpanel",
+        "ru_value": "Админ-панель",
+        "uz_value": "Admin-panel"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 17,
+    "fields": {
+        "key": "upravlyayte_kontentom_sami",
+        "ru_value": "Управляйте контентом сами",
+        "uz_value": "Kontentni o'zingiz boshqaring"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 18,
+    "fields": {
+        "key": "prinimaem_oplatu",
+        "ru_value": "Принимаем оплату",
+        "uz_value": "To'lovlarni qabul qilamiz"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 19,
+    "fields": {
+        "key": "nam_doveryayut",
+        "ru_value": "Нам доверяют",
+        "uz_value": "Bizga ishongan"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 20,
+    "fields": {
+        "key": "biznesov",
+        "ru_value": "бизнесов",
+        "uz_value": "ta biznes"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 21,
+    "fields": {
+        "key": "prosto_i_bystro",
+        "ru_value": "Просто и быстро",
+        "uz_value": "Oddiy va tez"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 22,
+    "fields": {
+        "key": "chetyre_prostyh_shaga_ot_vybor",
+        "ru_value": "Четыре простых шага от выбора шаблона до запуска вашего сайта",
+        "uz_value": "Shablon tanlashdan to saytingizni ishga tushirishgacha to'rtta oddiy qadam"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 23,
+    "fields": {
+        "key": "vyberite_shablon",
+        "ru_value": "Выберите шаблон",
+        "uz_value": "Shablonni tanlang"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 24,
+    "fields": {
+        "key": "prosmotrite_9_gotovyh_shablono",
+        "ru_value": "Просмотрите 9 готовых шаблонов по отраслям и выберите подходящий для вашего бизнеса",
+        "uz_value": "Sohalar bo'yicha 9 ta tayyor shablonni ko'rib chiqing va biznesingizga mosini tanlang"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 25,
+    "fields": {
+        "key": "otpravte_kontent",
+        "ru_value": "Отправьте контент",
+        "uz_value": "Kontentni yuboring"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 26,
+    "fields": {
+        "key": "prishlite_nam_teksty_foto_i_ko",
+        "ru_value": "Пришлите нам тексты, фото и контактные данные — мы всё разместим и настроим",
+        "uz_value": "Bizga matnlar, suratlar va aloqa ma'lumotlarini yuboring — biz hammasini joylashtirib, sozlab beramiz"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 27,
+    "fields": {
+        "key": "my_ustanavlivaem",
+        "ru_value": "Мы устанавливаем",
+        "uz_value": "Biz o'rnatamiz"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 28,
+    "fields": {
+        "key": "registriruem_domen_nastraivaem",
+        "ru_value": "Регистрируем домен, настраиваем хостинг, SSL и наполняем сайт вашим контентом",
+        "uz_value": "Domenni ro'yxatdan o'tkazamiz, xosting va SSL ni sozlaymiz hamda saytni sizning kontentingiz bilan to'ldiramiz"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 29,
+    "fields": {
+        "key": "sayt_rabotaet",
+        "ru_value": "Сайт работает",
+        "uz_value": "Sayt ishlayapti"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 30,
+    "fields": {
+        "key": "vash_sayt_dostupen_po_adresu_v",
+        "ru_value": "Ваш сайт доступен по адресу, вы получаете админ-панель для самостоятельного редактирования",
+        "uz_value": "Saytingiz o'z manzilida ishlaydi, siz esa mustaqil tahrirlash uchun admin-panel olasiz"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 31,
+    "fields": {
+        "key": "vyberite_gotovyy_dizayn",
+        "ru_value": "Выберите готовый дизайн",
+        "uz_value": "Tayyor dizaynni tanlang"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 32,
+    "fields": {
+        "key": "9_gotovyh_shablonov_dlya_razny",
+        "ru_value": "9 готовых шаблонов для разных отраслей — каждый можно адаптировать под ваш бренд",
+        "uz_value": "Turli sohalar uchun 9 ta tayyor shablon — har birini brendingizga moslashtirish mumkin"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 33,
+    "fields": {
+        "key": "vse",
+        "ru_value": "Все",
+        "uz_value": "Barchasi"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 34,
+    "fields": {
+        "key": "net_izobrazheniya",
+        "ru_value": "Нет изображения",
+        "uz_value": "Rasm yo'q"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 35,
+    "fields": {
+        "key": "vybrat",
+        "ru_value": "Выбрать",
+        "uz_value": "Tanlash"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 36,
+    "fields": {
+        "key": "chto_vhodit",
+        "ru_value": "Что входит",
+        "uz_value": "Nimalar kiritilgan"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 37,
+    "fields": {
+        "key": "vsyo_vklyucheno_v_odnu_tsenu",
+        "ru_value": "Всё включено в одну цену",
+        "uz_value": "Barchasi bitta narx ichida"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 38,
+    "fields": {
+        "key": "nikakih_skrytyh_platezhey_vy_p",
+        "ru_value": "Никаких скрытых платежей — вы получаете всё необходимое для работы сайта",
+        "uz_value": "Hech qanday yashirin to'lovlarsiz — siz sayt ishlashi uchun barcha zarur narsalarni olasiz"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 39,
+    "fields": {
+        "key": "domen_uz",
+        "ru_value": "Домен .uz",
+        "uz_value": "Domen .uz"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 40,
+    "fields": {
+        "key": "registratsiya_i_prodlenie_dome",
+        "ru_value": "Регистрация и продление доменного имени на ваш бизнес в зоне .uz включены в годовую стоимость",
+        "uz_value": ".uz zonasida biznesingiz nomiga domenni ro'yxatdan o'tkazish va uzaytirish yillik to'lov ichida"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 41,
+    "fields": {
+        "key": "hosting",
+        "ru_value": "Хостинг",
+        "uz_value": "Xosting"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 42,
+    "fields": {
+        "key": "nadyozhnyy_hosting_s_vysokoy_d",
+        "ru_value": "Надёжный хостинг с высокой доступностью и быстрой загрузкой страниц для посетителей",
+        "uz_value": "Tashrif buyuruvchilar uchun yuqori barqarorlik va sahifalarning tez yuklanishini ta'minlovchi ishonchli xosting"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 43,
+    "fields": {
+        "key": "sslsertifikat",
+        "ru_value": "SSL-сертификат",
+        "uz_value": "SSL-sertifikat"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 44,
+    "fields": {
+        "key": "besplatnyy_sslsertifikat_vash_",
+        "ru_value": "Бесплатный SSL-сертификат — ваш сайт работает по защищённому HTTPS-протоколу",
+        "uz_value": "Bepul SSL-sertifikat — saytingiz xavfsiz HTTPS protokoli orqali ishlaydi"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 45,
+    "fields": {
+        "key": "udobnaya_panel_upravleniya_men",
+        "ru_value": "Удобная панель управления — меняйте тексты, фото и цены на сайте без программиста",
+        "uz_value": "Qulay boshqaruv paneli — saytdagi matn, rasm va narxlarni dasturchisiz o'zgartiring"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 46,
+    "fields": {
+        "key": "podderzhka",
+        "ru_value": "Поддержка",
+        "uz_value": "Qo'llab-quvvatlash"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 47,
+    "fields": {
+        "key": "tehnicheskaya_podderzhka_po_te",
+        "ru_value": "Техническая поддержка по телефону и Telegram — помогаем с любыми вопросами по сайту",
+        "uz_value": "Telefon va Telegram orqali texnik yordam — sayt bo'yicha har qanday savollarda ko'maklashamiz"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 48,
+    "fields": {
+        "key": "usloviya_prodleniya",
+        "ru_value": "Условия продления",
+        "uz_value": "Muddatni uzaytirish shartlari"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 49,
+    "fields": {
+        "key": "prodlenie_na_sleduyuschiy_god_",
+        "ru_value": "Продление на следующий год — те же $200. Домен и хостинг автоматически продлеваются",
+        "uz_value": "Keyingi yil uchun muddatni uzaytirish — o'sha $200. Domen va xosting avtomatik uzaytiriladi"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 50,
+    "fields": {
+        "key": "sravnenie",
+        "ru_value": "Сравнение",
+        "uz_value": "Taqqoslash"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 51,
+    "fields": {
+        "key": "pochemu_my_vygodnee",
+        "ru_value": "Почему мы выгоднее",
+        "uz_value": "Nega biz tejamkorroqmiz"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 52,
+    "fields": {
+        "key": "sravnenie_s_samostoyatelnym_so",
+        "ru_value": "Сравнение с самостоятельным созданием сайта и заказом у фрилансера",
+        "uz_value": "Saytni o'zi yaratish va frilanserga buyurtma berish bilan taqqoslash"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 53,
+    "fields": {
+        "key": "sdelat_samomu",
+        "ru_value": "Сделать самому",
+        "uz_value": "O'zingiz yaratish"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 54,
+    "fields": {
+        "key": "konstruktor_saytov",
+        "ru_value": "Конструктор сайтов",
+        "uz_value": "Sayt konstruktori"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 55,
+    "fields": {
+        "key": "frilanser",
+        "ru_value": "Фрилансер",
+        "uz_value": "Frilanser"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 56,
+    "fields": {
+        "key": "zakaz_u_chastnika",
+        "ru_value": "Заказ у частника",
+        "uz_value": "Mutaxassisga buyurtma berish"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 57,
+    "fields": {
+        "key": "nash_servis",
+        "ru_value": "Наш сервис",
+        "uz_value": "Bizning xizmat"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 58,
+    "fields": {
+        "key": "tsena",
+        "ru_value": "Цена",
+        "uz_value": "Narxi"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 59,
+    "fields": {
+        "key": "100300god_vashe_vremya",
+        "ru_value": "$100-300/год + ваше время",
+        "uz_value": "$100-300/yil + sizning vaqtingiz"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 60,
+    "fields": {
+        "key": "5002000_hosting",
+        "ru_value": "$500-2000 + хостинг",
+        "uz_value": "$500-2000 + xosting"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 61,
+    "fields": {
+        "key": "200god_vsyo_vklyucheno",
+        "ru_value": "$200/год — всё включено",
+        "uz_value": "$200/yil — barchasi ichida"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 62,
+    "fields": {
+        "key": "srok_zapuska",
+        "ru_value": "Срок запуска",
+        "uz_value": "Ishga tushirish muddati"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 63,
+    "fields": {
+        "key": "14_nedeli",
+        "ru_value": "1-4 недели",
+        "uz_value": "1-4 hafta"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 64,
+    "fields": {
+        "key": "28_nedel",
+        "ru_value": "2-8 недель",
+        "uz_value": "2-8 hafta"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 65,
+    "fields": {
+        "key": "3_dnya",
+        "ru_value": "3 дня",
+        "uz_value": "3 kun"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 66,
+    "fields": {
+        "key": "tolko_bazovaya",
+        "ru_value": "Только базовая",
+        "uz_value": "Faqat bazaviy"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 67,
+    "fields": {
+        "key": "chasto_propadaet",
+        "ru_value": "Часто пропадает",
+        "uz_value": "Ko'pincha aloqaga chiqmaydi"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 68,
+    "fields": {
+        "key": "postoyannaya_po_telegram",
+        "ru_value": "Постоянная по Telegram",
+        "uz_value": "Telegram orqali doimiy"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 69,
+    "fields": {
+        "key": "udobstvo_redaktirovaniya",
+        "ru_value": "Удобство редактирования",
+        "uz_value": "Tahrirlash qulayligi"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 70,
+    "fields": {
+        "key": "slozhnyy_interfeys",
+        "ru_value": "Сложный интерфейс",
+        "uz_value": "Murakkab interfeys"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 71,
+    "fields": {
+        "key": "nuzhno_zvat_frilansera",
+        "ru_value": "Нужно звать фрилансера",
+        "uz_value": "Frilanserni chaqirish kerak"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 72,
+    "fields": {
+        "key": "prostaya_adminpanel",
+        "ru_value": "Простая админ-панель",
+        "uz_value": "Oddiy admin-panel"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 73,
+    "fields": {
+        "key": "100300god_vremya",
+        "ru_value": "$100-300/год + время",
+        "uz_value": "$100-300/yil + vaqt"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 74,
+    "fields": {
+        "key": "srok",
+        "ru_value": "Срок",
+        "uz_value": "Muddat"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 75,
+    "fields": {
+        "key": "bazovaya",
+        "ru_value": "Базовая",
+        "uz_value": "Bazaviy"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 76,
+    "fields": {
+        "key": "redaktirovanie",
+        "ru_value": "Редактирование",
+        "uz_value": "Tahrirlash"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 77,
+    "fields": {
+        "key": "slozhno",
+        "ru_value": "Сложно",
+        "uz_value": "Murakkab"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 78,
+    "fields": {
+        "key": "cherez_frilansera",
+        "ru_value": "Через фрилансера",
+        "uz_value": "Frilanser orqali"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 79,
+    "fields": {
+        "key": "postoyannaya",
+        "ru_value": "Постоянная",
+        "uz_value": "Doimiy"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 80,
+    "fields": {
+        "key": "prostaya_panel",
+        "ru_value": "Простая панель",
+        "uz_value": "Oddiy panel"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 81,
+    "fields": {
+        "key": "otzyvy",
+        "ru_value": "Отзывы",
+        "uz_value": "Fikr-mulohazalar"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 82,
+    "fields": {
+        "key": "chto_govoryat_klienty",
+        "ru_value": "Что говорят клиенты",
+        "uz_value": "Mijozlarimiz nima deydi"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 83,
+    "fields": {
+        "key": "prostaya_i_chestnaya_tsena",
+        "ru_value": "Простая и честная цена",
+        "uz_value": "Oddiy va halol narx"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 84,
+    "fields": {
+        "key": "odna_tsena_vsyo_vklyucheno_bez",
+        "ru_value": "Одна цена — всё включено. Без скрытых платежей и доплат.",
+        "uz_value": "Yagona narx — barchasi ichida. Yashirin to'lovlar va qo'shimchalarsiz."
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 85,
+    "fields": {
+        "key": "godovoy_plan",
+        "ru_value": "Годовой план",
+        "uz_value": "Yillik tarif"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 86,
+    "fields": {
+        "key": "god",
+        "ru_value": "/год",
+        "uz_value": "/yil"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 87,
+    "fields": {
+        "key": "vsyo_vklyucheno_bez_doplat",
+        "ru_value": "Всё включено — без доплат",
+        "uz_value": "Barchasi kiritilgan — qo'shimcha to'lovlarsiz"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 88,
+    "fields": {
+        "key": "domen_uz_vklyuchyon_v_stoimost",
+        "ru_value": "Домен .uz включён в стоимость",
+        "uz_value": ".uz domeni narx ichiga kiritilgan"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 89,
+    "fields": {
+        "key": "hosting_na_ves_god",
+        "ru_value": "Хостинг на весь год",
+        "uz_value": "Butun yil uchun xosting"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 90,
+    "fields": {
+        "key": "sslsertifikat_https",
+        "ru_value": "SSL-сертификат (HTTPS)",
+        "uz_value": "SSL-sertifikat (HTTPS)"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 91,
+    "fields": {
+        "key": "adminpanel_dlya_samostoyatelno",
+        "ru_value": "Админ-панель для самостоятельного редактирования",
+        "uz_value": "Mustaqil tahrirlash uchun admin-panel"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 92,
+    "fields": {
+        "key": "ustanovka_i_nastroyka_za_3_dny",
+        "ru_value": "Установка и настройка за 3 дня",
+        "uz_value": "3 kunda o'rnatish va sozlash"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 93,
+    "fields": {
+        "key": "polnoe_pravo_vladeniya_kodom_b",
+        "ru_value": "Полное право владения кодом — без блокировки",
+        "uz_value": "Kodga to'liq egalik huquqi — hech qanday cheklovlarsiz"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 94,
+    "fields": {
+        "key": "chastye_voprosy",
+        "ru_value": "Частые вопросы",
+        "uz_value": "Ko'p beriladigan savollar"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 95,
+    "fields": {
+        "key": "svyazatsya_s_nami",
+        "ru_value": "Связаться с нами",
+        "uz_value": "Biz bilan bog'lanish"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 96,
+    "fields": {
+        "key": "zakazhite_sayt_segodnya",
+        "ru_value": "Закажите сайт сегодня",
+        "uz_value": "Saytga bugun buyurtma bering"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 97,
+    "fields": {
+        "key": "ostavte_zayavku_my_svyazhemsya",
+        "ru_value": "Оставьте заявку — мы свяжемся с вами в течение дня, подберём шаблон и ответим на все вопросы. Без обязательств.",
+        "uz_value": "So'rov qoldiring — biz kun davomida siz bilan bog'lanamiz, shablon tanlaymiz va barcha savollarga javob beramiz. Majburiyatlarsiz."
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 98,
+    "fields": {
+        "key": "napisat_v_telegram",
+        "ru_value": "Написать в Telegram",
+        "uz_value": "Telegram'da yozish"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 99,
+    "fields": {
+        "key": "vashe_imya",
+        "ru_value": "Ваше имя *",
+        "uz_value": "Ismingiz *"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 100,
+    "fields": {
+        "key": "vvedite_vashe_imya",
+        "ru_value": "Введите ваше имя",
+        "uz_value": "Ismingizni kiriting"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 101,
+    "fields": {
+        "key": "telefon",
+        "ru_value": "Телефон *",
+        "uz_value": "Telefon raqamingiz *"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 102,
+    "fields": {
+        "key": "tip_biznesa",
+        "ru_value": "Тип бизнеса",
+        "uz_value": "Biznes turi"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 103,
+    "fields": {
+        "key": "vyberite_tip_biznesa",
+        "ru_value": "Выберите тип бизнеса",
+        "uz_value": "Biznes turini tanlang"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 104,
+    "fields": {
+        "key": "restoran_kafe",
+        "ru_value": "Ресторан / Кафе",
+        "uz_value": "Restoran / Kafe"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 105,
+    "fields": {
+        "key": "salon_krasoty",
+        "ru_value": "Салон красоты",
+        "uz_value": "Go'zallik saloni"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 106,
+    "fields": {
+        "key": "klinika_meditsina",
+        "ru_value": "Клиника / Медицина",
+        "uz_value": "Klinika / Tibbiyot"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 107,
+    "fields": {
+        "key": "magazin_roznitsa",
+        "ru_value": "Магазин / Розница",
+        "uz_value": "Do'kon / Chakana savdo"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 108,
+    "fields": {
+        "key": "avtoservis_avto",
+        "ru_value": "Автосервис / Авто",
+        "uz_value": "Avtoservis / Avto"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 109,
+    "fields": {
+        "key": "fitnes_sport",
+        "ru_value": "Фитнес / Спорт",
+        "uz_value": "Fitnes / Sport"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 110,
+    "fields": {
+        "key": "drugoe",
+        "ru_value": "Другое",
+        "uz_value": "Boshqa"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 111,
+    "fields": {
+        "key": "soobschenie",
+        "ru_value": "Сообщение",
+        "uz_value": "Xabar"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 112,
+    "fields": {
+        "key": "rasskazhite_o_biznese",
+        "ru_value": "Расскажите о вашем бизнесе и пожеланиях к сайту",
+        "uz_value": "Biznesingiz va sayt bo'yicha istaklaringiz haqida so'zlab bering"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 113,
+    "fields": {
+        "key": "sozdayom_gotovye_sayty_dlya_ma",
+        "ru_value": "Создаём готовые сайты для малого и среднего бизнеса в Узбекистане. Домен, хостинг и админ-панель включены.",
+        "uz_value": "O'zbekistonda kichik va o'rta biznes uchun tayyor saytlar yaratamiz. Domen, xosting va admin-panel kiritilgan."
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 114,
+    "fields": {
+        "key": "navigatsiya",
+        "ru_value": "Навигация",
+        "uz_value": "Navigatsiya"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 115,
+    "fields": {
+        "key": "kontakty",
+        "ru_value": "Контакты",
+        "uz_value": "Aloqa"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 116,
+    "fields": {
+        "key": "my_v_sotssetyah",
+        "ru_value": "Мы в соцсетях",
+        "uz_value": "Ijtimoiy tarmoqlarimiz"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 117,
+    "fields": {
+        "key": "tashkent_uzbekistan",
+        "ru_value": "Ташкент, Узбекистан",
+        "uz_value": "Toshkent, O'zbekiston"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 118,
+    "fields": {
+        "key": "2026_osonsayt_vse_prava_zaschi",
+        "ru_value": "© 2026 osonSAYT. Все права защищены.",
+        "uz_value": "© 2026 osonSAYT. Barcha huquqlar himoyalangan."
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 119,
+    "fields": {
+        "key": "politika_konfidentsialnosti",
+        "ru_value": "Политика конфиденциальности",
+        "uz_value": "Maxfiylik siyosati"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 120,
+    "fields": {
+        "key": "usloviya_ispolzovaniya",
+        "ru_value": "Условия использования",
+        "uz_value": "Foydalanish shartlari"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 121,
+    "fields": {
+        "key": "sozdayte_sayt_dlya_vashego_biz",
+        "ru_value": "Создайте сайт для вашего бизнеса за $200 в год. Домен, хостинг, SSL-сертификат и админ-панель включены. Готово за 3 дня.",
+        "uz_value": "Biznesingiz uchun yiliga $200 ga sayt yarating. Domen, xosting, SSL-sertifikat va admin-panel kiritilgan. 3 kunda tayyor."
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 122,
+    "fields": {
+        "key": "osonsayt_sayt_dlya_vashego_biz_2",
+        "ru_value": "osonSAYT — Сайт для вашего бизнеса за $200/год",
+        "uz_value": "osonSAYT — Biznesingiz uchun yiliga $200 ga sayt"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 123,
+    "fields": {
+        "key": "domen_hosting_ssl_i_admin_pane",
+        "ru_value": "Домен, хостинг, SSL и админ-панель включены. Готово за 3 дня.",
+        "uz_value": "Domen, xosting, SSL va admin-panel kiritilgan. 3 kunda tayyor."
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 124,
+    "fields": {
+        "key": "menyu",
+        "ru_value": "Меню",
+        "uz_value": "Menyu"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 125,
+    "fields": {
+        "key": "hosting_i_admin_panel",
+        "ru_value": "хостинг и админ-панель",
+        "uz_value": "xosting va admin-panel"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 126,
+    "fields": {
+        "key": "admin_panel",
+        "ru_value": "Админ-панель",
+        "uz_value": "Admin-panel"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 127,
+    "fields": {
+        "key": "ssl_sertifikat",
+        "ru_value": "SSL-сертификат",
+        "uz_value": "SSL-sertifikat"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 128,
+    "fields": {
+        "key": "besplatnyy_ssl_sertifikat_vash",
+        "ru_value": "Бесплатный SSL-сертификат — ваш сайт работает по защищённому HTTPS-протоколу",
+        "uz_value": "Bepul SSL-sertifikat — saytingiz xavfsiz HTTPS protokoli orqali ishlaydi"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 129,
+    "fields": {
+        "key": "100_300_god_vashe_vremya",
+        "ru_value": "$100-300/год + ваше время",
+        "uz_value": "$100-300/yil + sizning vaqtingiz"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 130,
+    "fields": {
+        "key": "500_2000_hosting",
+        "ru_value": "$500-2000 + хостинг",
+        "uz_value": "$500-2000 + xosting"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 131,
+    "fields": {
+        "key": "200_god_vsyo_vklyucheno",
+        "ru_value": "$200/год — всё включено",
+        "uz_value": "$200/yil — barchasi ichida"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 132,
+    "fields": {
+        "key": "1_4_nedeli",
+        "ru_value": "1-4 недели",
+        "uz_value": "1-4 hafta"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 133,
+    "fields": {
+        "key": "2_8_nedel",
+        "ru_value": "2-8 недель",
+        "uz_value": "2-8 hafta"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 134,
+    "fields": {
+        "key": "prostaya_admin_panel",
+        "ru_value": "Простая админ-панель",
+        "uz_value": "Oddiy admin-panel"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 135,
+    "fields": {
+        "key": "100_300_god_vremya",
+        "ru_value": "$100-300/год + время",
+        "uz_value": "$100-300/yil + vaqt"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 136,
+    "fields": {
+        "key": "ssl_sertifikat_https",
+        "ru_value": "SSL-сертификат (HTTPS)",
+        "uz_value": "SSL-sertifikat (HTTPS)"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 137,
+    "fields": {
+        "key": "admin_panel_dlya_samostoyateln",
+        "ru_value": "Админ-панель для самостоятельного редактирования",
+        "uz_value": "Mustaqil tahrirlash uchun admin-panel"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 138,
+    "fields": {
+        "key": "rasskazhite_o_vashem_biznese_i",
+        "ru_value": "Расскажите о вашем бизнесе и пожеланиях к сайту",
+        "uz_value": "Biznesingiz va sayt bo'yicha istaklaringiz haqida so'zlab bering"
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 139,
+    "fields": {
+        "key": "shablony_poka_ne_dobavleny",
+        "ru_value": "Шаблоны пока не добавлены.",
+        "uz_value": "Shablonlar hali qo'shilmagan."
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 140,
+    "fields": {
+        "key": "voprosy_poka_ne_dobavleny",
+        "ru_value": "Вопросы пока не добавлены.",
+        "uz_value": "Savollar hali qo'shilmagan."
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 141,
+    "fields": {
+        "key": "otzyvy_poka_ne_dobavleny",
+        "ru_value": "Отзывы пока не добавлены.",
+        "uz_value": "Fikr-mulohazalar hali qo'shilmagan."
+    }
+}
+]
