@@ -8,4 +8,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('i18n/', include('django.conf.urls.i18n')),
     path('', views.home, name='home'),
+    path('submit-lead/', views.submit_lead, name='submit_lead'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

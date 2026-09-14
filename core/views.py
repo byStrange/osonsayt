@@ -15,3 +15,45 @@ def home(request):
         'testimonials': testimonials,
         'faqs': faqs,
     })
+
+import os
+import json
+import urllib.request
+from django.shortcuts import redirect
+from django.contrib import messages
+from django.views.decorators.http import require_POST
+
+@require_POST
+def submit_lead(request):
+    name = request.POST.get('name', '')
+    phone = request.POST.get('phone', '')
+    message_text = request.POST.get('message', '')
+    
+    settings = SiteSettings.objects.first()
+    chat_id = settings.telegram_chat_id if settings else None
+    bot_token = os.environ.get('TELEGRAM_BOT_TOKEN')
+    
+    if chat_id and bot_token:
+        text = f"🚨 <b>Новая заявка (osonSAYT)</b>\n\n"
+        text += f"👤 <b>Имя:</b> {name}\n"
+        text += f"📞 <b>Телефон:</b> {phone}\n"
+        if message_text:
+            text += f"💬 <b>Сообщение:</b> {message_text}\n"
+            
+        url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+        data = json.dumps({
+            "chat_id": chat_id,
+            "text": text,
+            "parse_mode": "HTML"
+        }).encode('utf-8')
+        
+        req = urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json'})
+        try:
+            urllib.request.urlopen(req)
+            messages.success(request, "Ваша заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.")
+        except Exception as e:
+            messages.error(request, "Произошла ошибка при отправке заявки. Пожалуйста, попробуйте позже или свяжитесь с нами по телефону.")
+    else:
+        messages.error(request, "Сервис временно недоступен (не настроен Telegram).")
+        
+    return redirect('/#contact')

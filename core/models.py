@@ -43,6 +43,7 @@ class SiteSettings(models.Model):
     phone = models.CharField(max_length=50, default='+998 (00) 000-00-00')
     email = models.EmailField(default='info@osonsayt.uz')
     telegram = models.URLField(blank=True, null=True)
+    telegram_chat_id = models.CharField(max_length=100, blank=True, null=True, help_text="Chat ID for receiving leads")
     instagram = models.URLField(blank=True, null=True)
     address = models.CharField(max_length=255, default='Tashkent, Uzbekistan')
 
