@@ -96,3 +96,15 @@
 </div>
 </div>
 </section>
+<!-- Phone Mask Script -->
+<script src="https://unpkg.com/imask"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const phoneInput = document.getElementById('phone');
+    if (phoneInput) {
+      IMask(phoneInput, {
+        mask: '+{998} (00) 000-00-00'
+      });
+    }
+  });
+</script>
