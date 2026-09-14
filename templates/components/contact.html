@@ -1,0 +1,88 @@
+{% load i18n_tags %}
+<section class="py-16 lg:py-24 bg-slate-900 relative overflow-hidden" id="contact">
+<div class="absolute inset-0 pointer-events-none">
+<div class="absolute -top-40 -right-40 w-96 h-96 bg-primary-600 rounded-full opacity-10 blur-3xl"></div>
+<div class="absolute -bottom-40 -left-40 w-80 h-80 bg-primary-500 rounded-full opacity-10 blur-3xl"></div>
+</div>
+<div class="relative max-w-container mx-auto px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<!-- Left: text -->
+<div class="reveal">
+<span class="text-sm font-semibold text-primary-400 uppercase tracking-wider">{% t 'svyazatsya_s_nami' 'Связаться с нами' %}</span>
+<h2 class="mt-2 text-3xl lg:text-4xl font-extrabold text-white">{% t 'zakazhite_sayt_segodnya' 'Закажите сайт сегодня' %}</h2>
+<p class="mt-4 text-slate-400 leading-relaxed max-w-md">{% t 'ostavte_zayavku_my_svyazhemsya' 'Оставьте заявку — мы свяжемся с вами в течение дня, подберём шаблон и ответим на все вопросы. Без обязательств.' %}</p>
+<div class="mt-8 space-y-4">
+<div class="flex items-center gap-3 text-slate-300">
+<div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center">
+<svg class="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</div>
+<a class="text-sm font-medium hover:text-white transition-colors" href="tel:{{ site_settings.phone|urlencode }}">{{ site_settings.phone }}</a>
+</div>
+<div class="flex items-center gap-3 text-slate-300">
+<div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center">
+<svg class="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</div>
+<a class="text-sm font-medium hover:text-white transition-colors" href="mailto:{{ site_settings.email }}">{{ site_settings.email }}</a>
+</div>
+<div class="flex items-center gap-3 text-slate-300">
+<div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center">
+<svg class="w-5 h-5 text-primary-400" fill="currentColor" viewbox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.225l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.603.295l.213-3.054 5.56-5.022c.242-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.643.135-.953l11.566-4.458c.538-.196 1.006.128.831.941z"></path></svg>
+</div>
+<a class="text-sm font-medium hover:text-white transition-colors" href="{{ site_settings.telegram }}" rel="noopener" target="_blank">{% t 'napisat_v_telegram' 'Написать в Telegram' %}</a>
+</div>
+</div>
+</div>
+<!-- Right: form -->
+<div class="reveal">
+<div class="bg-white rounded-3xl p-6 lg:p-8 shadow-2xl">
+<form action="/submit-lead/" class="space-y-5" method="POST">
+<!-- Django CSRF token placeholder -->
+<!-- {% csrf_token %} -->
+<!-- Name -->
+<div>
+<label class="block text-sm font-medium text-slate-700 mb-2" for="name">{% t 'vashe_imya' 'Ваше имя *' %}</label>
+<input class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all" id="name" name="name" placeholder="{% t 'vvedite_vashe_imya' 'Введите ваше имя' %}" required="" type="text"/>
+</div>
+<!-- Phone -->
+<div>
+<label class="block text-sm font-medium text-slate-700 mb-2" for="phone">{% t 'telefon' 'Телефон *' %}</label>
+<input class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all" id="phone" name="phone" placeholder="{{ site_settings.phone }}" required="" type="tel"/>
+</div>
+<!-- Business type dropdown -->
+<div>
+<label class="block text-sm font-medium text-slate-700 mb-2" for="business_type">{% t 'tip_biznesa' 'Тип бизнеса' %}</label>
+<select class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all" id="business_type" name="business_type">
+<option value="">{% t 'vyberite_tip_biznesa' 'Выберите тип бизнеса' %}</option>
+<option value="restaurant">{% t 'restoran_kafe' 'Ресторан / Кафе' %}</option>
+<option value="salon">{% t 'salon_krasoty' 'Салон красоты' %}</option>
+<option value="clinic">{% t 'klinika_meditsina' 'Клиника / Медицина' %}</option>
+<option value="retail">{% t 'magazin_roznitsa' 'Магазин / Розница' %}</option>
+<option value="auto">{% t 'avtoservis_avto' 'Автосервис / Авто' %}</option>
+<option value="fitness">{% t 'fitnes_sport' 'Фитнес / Спорт' %}</option>
+<option value="other">{% t 'drugoe' 'Другое' %}</option>
+</select>
+</div>
+<!-- Message -->
+<div>
+<label class="block text-sm font-medium text-slate-700 mb-2" for="message">{% t 'soobschenie' 'Сообщение' %}</label>
+<textarea class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all resize-none" id="message" name="message" placeholder="{% t 'rasskazhite_o_vashem_biznese_i' 'Расскажите о вашем бизнесе и пожеланиях к сайту' %}" rows="3"></textarea>
+</div>
+<!-- Submit buttons -->
+<div class="flex flex-col sm:flex-row gap-3 pt-2">
+<button class="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold rounded-xl transition-colors shadow-lg shadow-primary-600/20" type="submit">
+                  {% t 'zakazat_sayt' 'Заказать сайт' %}
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<a class="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-sky-50 hover:bg-sky-100 text-sky-600 text-sm font-semibold rounded-xl border border-sky-200 transition-colors" href="{{ site_settings.telegram }}" rel="noopener" target="_blank">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.225l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.603.295l.213-3.054 5.56-5.022c.242-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.643.135-.953l11.566-4.458c.538-.196 1.006.128.831.941z"></path></svg>
+                  {% t 'napisat_v_telegram' 'Написать в Telegram' %}
+                </a>
+</div>
+<!-- Success/error message area (Django can populate this) -->
+<!-- {% if messages %}{% for message in messages %}<div class="mt-4 p-3 rounded-lg text-sm {{ message.tags }}">{{ message }}</div>{% endfor %}{% endif %} -->
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>

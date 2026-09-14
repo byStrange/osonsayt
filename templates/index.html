@@ -1,0 +1,1555 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>osonSAYT — Сайт для вашего бизнеса за $200/год | Домен, хостинг и админ-панель включены</title>
+  <meta name="description" content="Создайте сайт для вашего бизнеса за $200 в год. Домен, хостинг, SSL-сертификат и админ-панель включены. Готово за 3 дня." />
+  <meta property="og:title" content="osonSAYT — Сайт для вашего бизнеса за $200/год" />
+  <meta property="og:description" content="Домен, хостинг, SSL и админ-панель включены. Готово за 3 дня." />
+  <meta property="og:type" content="website" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#F0FDFA',
+              100: '#CCFBF1',
+              200: '#99F6E4',
+              300: '#5EEAD4',
+              400: '#2DD4BF',
+              500: '#14B8A6',
+              600: '#0D9488',
+              700: '#0F766E',
+              800: '#115E5A',
+              900: '#134E4A',
+            },
+            accent: {
+              50: '#FFFBEB',
+              100: '#FEF3C7',
+              200: '#FDE68A',
+              300: '#FCD34D',
+              400: '#FBBF24',
+              500: '#F59E0B',
+              600: '#D97706',
+            },
+            success: {
+              500: '#22C55E',
+              600: '#16A34A',
+            },
+            warning: {
+              500: '#F59E0B',
+          },
+            error: {
+              500: '#EF4444',
+              600: '#DC2626',
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+          },
+          maxWidth: {
+            'container': '1280px',
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+
+    /* Scroll reveal animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Template thumbnail browser mockup */
+    .thumb-browser-bar {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 6px 8px;
+      border-radius: 6px 6px 0 0;
+    }
+    .thumb-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+
+    /* FAQ accordion */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 500px;
+      padding-top: 0;
+      padding-bottom: 24px;
+    }
+    .faq-item.open .faq-chevron {
+      transform: rotate(180deg);
+    }
+    .faq-chevron {
+      transition: transform 0.3s ease;
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .mobile-menu.open {
+      max-height: 400px;
+    }
+
+    /* Gallery filter active state */
+    .filter-btn.active {
+      background-color: #0D9488;
+      color: #ffffff;
+    }
+
+    /* Template card hover */
+    .template-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .template-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+    }
+
+    /* Comparison table highlight */
+    .compare-highlight {
+      box-shadow: 0 0 0 2px #0D9488;
+    }
+  </style>
+  <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+  <!-- =================== HEADER =================== -->
+  <header id="header" class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
+    <div class="max-w-container mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2 shrink-0">
+          <div class="w-9 h-9 rounded-lg bg-primary-600 flex items-center justify-center">
+            <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h12A2.25 2.25 0 0120.25 6v12A2.25 2.25 0 0118 20.25H6A2.25 2.25 0 013.75 18V6zM3.75 9h16.5M9 3.75v16.5" />
+            </svg>
+          </div>
+          <span class="text-xl font-extrabold text-slate-900 tracking-tight">oson<span class="text-primary-600">SAYT</span></span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="#templates" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition-colors">Шаблоны</a>
+          <a href="#pricing" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition-colors">Цены</a>
+          <a href="#how-it-works" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition-colors">Как это работает</a>
+          <a href="#faq" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition-colors">FAQ</a>
+        </nav>
+
+        <!-- Right side -->
+        <div class="flex items-center gap-3 lg:gap-4">
+          <a href="tel:+998901234567" class="hidden sm:flex items-center gap-1.5 text-sm font-semibold text-slate-700 hover:text-primary-600 transition-colors">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+            </svg>
+            <span class="hidden md:inline">+998 90 123 45 67</span>
+          </a>
+          <a href="https://t.me/osonsayt" target="_blank" rel="noopener" class="w-9 h-9 flex items-center justify-center rounded-lg bg-sky-50 hover:bg-sky-100 transition-colors" aria-label="Telegram">
+            <svg class="w-5 h-5 text-sky-500" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.225l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.603.295l.213-3.054 5.56-5.022c.242-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.643.135-.953l11.566-4.458c.538-.196 1.006.128.831.941z"/>
+            </svg>
+          </a>
+          <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm">
+            Заказать сайт
+          </a>
+
+          <!-- Mobile menu button -->
+          <button id="mobileMenuBtn" class="lg:hidden w-9 h-9 flex items-center justify-center rounded-lg hover:bg-slate-100 transition-colors" aria-label="Меню">
+            <svg class="w-6 h-6 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="mobile-menu lg:hidden">
+        <nav class="flex flex-col gap-1 py-4 border-t border-slate-200">
+          <a href="#templates" class="px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 rounded-lg">Шаблоны</a>
+          <a href="#pricing" class="px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 rounded-lg">Цены</a>
+          <a href="#how-it-works" class="px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 rounded-lg">Как это работает</a>
+          <a href="#faq" class="px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 rounded-lg">FAQ</a>
+          <a href="#contact" class="mx-4 mt-2 inline-flex items-center justify-center px-5 py-3 bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold rounded-lg transition-colors">
+            Заказать сайт
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- =================== HERO =================== -->
+  <section id="hero" class="relative overflow-hidden bg-gradient-to-b from-primary-50 via-white to-white">
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute -top-40 -right-40 w-96 h-96 bg-primary-200 rounded-full opacity-20 blur-3xl"></div>
+      <div class="absolute top-20 -left-40 w-80 h-80 bg-accent-200 rounded-full opacity-10 blur-3xl"></div>
+    </div>
+    <div class="relative max-w-container mx-auto px-6 lg:px-8 pt-16 pb-12 lg:pt-24 lg:pb-20">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Left: text -->
+        <div class="reveal">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-primary-100 text-primary-700 text-xs font-semibold rounded-full mb-6">
+            <span class="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></span>
+            Подключено более 120 бизнесов
+          </div>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-slate-900 leading-tight tracking-tight">
+            Сайт для вашего бизнеса<br>
+            <span class="text-primary-600">$200 в год</span> — домен,<br>
+            хостинг и админ-панель<br class="hidden lg:block">
+            включены
+          </h1>
+          <p class="mt-6 text-base lg:text-lg text-slate-600 leading-relaxed max-w-xl">
+            Выберите готовый шаблон, отправьте нам содержание — и через 3 дня ваш сайт уже работает. Без скрытых платежей, без блокировки, с полным правом владения кодом.
+          </p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <a href="#contact" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-primary-600 hover:bg-primary-700 text-white text-base font-semibold rounded-xl transition-colors shadow-lg shadow-primary-600/20">
+              Заказать сайт
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </a>
+            <a href="#templates" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-700 text-base font-semibold rounded-xl border border-slate-200 transition-colors">
+              Смотреть шаблоны
+            </a>
+          </div>
+          <div class="mt-8 flex items-center gap-6 text-sm text-slate-500">
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-success-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Без предоплаты
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-success-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Готово за 3 дня
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: browser mockup -->
+        <div class="reveal relative">
+          <div class="relative mx-auto max-w-lg lg:max-w-none">
+            <!-- Browser frame -->
+            <div class="bg-white rounded-2xl shadow-2xl shadow-primary-900/10 border border-slate-200 overflow-hidden">
+              <!-- Browser bar -->
+              <div class="flex items-center gap-2 px-4 py-3 bg-slate-100 border-b border-slate-200">
+                <div class="flex gap-1.5">
+                  <div class="w-3 h-3 bg-red-400 rounded-full"></div>
+                  <div class="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                  <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+                </div>
+                <div class="flex-1 mx-3">
+                  <div class="bg-white rounded-md px-3 py-1 text-xs text-slate-400 border border-slate-200">
+                    https://my-business.osonsayt.uz
+                  </div>
+                </div>
+              </div>
+              <!-- Browser content: sample site -->
+              <div class="p-0">
+                <!-- Sample site header -->
+                <div class="flex items-center justify-between px-6 py-4 bg-primary-700">
+                  <div class="flex items-center gap-2">
+                    <div class="w-6 h-6 bg-white/20 rounded"></div>
+                    <div class="h-2 w-20 bg-white/80 rounded"></div>
+                  </div>
+                  <div class="flex gap-3">
+                    <div class="h-2 w-10 bg-white/40 rounded"></div>
+                    <div class="h-2 w-10 bg-white/40 rounded"></div>
+                    <div class="h-2 w-10 bg-white/40 rounded"></div>
+                  </div>
+                </div>
+                <!-- Sample site hero -->
+                <div class="px-6 py-10 bg-primary-50">
+                  <div class="h-3 w-3/4 bg-slate-300 rounded mb-3"></div>
+                  <div class="h-3 w-1/2 bg-slate-300 rounded mb-6"></div>
+                  <div class="h-2 w-full bg-slate-200 rounded mb-2"></div>
+                  <div class="h-2 w-5/6 bg-slate-200 rounded mb-6"></div>
+                  <div class="flex gap-3">
+                    <div class="h-8 w-24 bg-primary-600 rounded-lg"></div>
+                    <div class="h-8 w-24 bg-slate-200 rounded-lg"></div>
+                  </div>
+                </div>
+                <!-- Sample site cards -->
+                <div class="px-6 py-8 bg-white">
+                  <div class="grid grid-cols-3 gap-3">
+                    <div class="space-y-2">
+                      <div class="h-16 bg-primary-100 rounded-lg"></div>
+                      <div class="h-2 w-full bg-slate-200 rounded"></div>
+                      <div class="h-2 w-2/3 bg-slate-200 rounded"></div>
+                    </div>
+                    <div class="space-y-2">
+                      <div class="h-16 bg-accent-100 rounded-lg"></div>
+                      <div class="h-2 w-full bg-slate-200 rounded"></div>
+                      <div class="h-2 w-2/3 bg-slate-200 rounded"></div>
+                    </div>
+                    <div class="space-y-2">
+                      <div class="h-16 bg-slate-100 rounded-lg"></div>
+                      <div class="h-2 w-full bg-slate-200 rounded"></div>
+                      <div class="h-2 w-2/3 bg-slate-200 rounded"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Sample site footer -->
+                <div class="px-6 py-4 bg-slate-800 flex items-center justify-between">
+                  <div class="h-2 w-16 bg-slate-600 rounded"></div>
+                  <div class="flex gap-2">
+                    <div class="w-5 h-5 bg-slate-600 rounded"></div>
+                    <div class="w-5 h-5 bg-slate-600 rounded"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating admin panel badge -->
+            <div class="absolute -bottom-4 -left-4 lg:-left-8 bg-white rounded-xl shadow-xl border border-slate-200 px-4 py-3 flex items-center gap-3 hidden sm:flex">
+              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <div>
+                <div class="text-xs font-semibold text-slate-900">Админ-панель</div>
+                <div class="text-xs text-slate-500">Управляйте контентом сами</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== TRUST BAR =================== -->
+  <section class="bg-slate-900 text-white">
+    <div class="max-w-container mx-auto px-6 lg:px-8 py-6">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-6">
+          <span class="text-xs font-medium text-slate-400 uppercase tracking-wider">Принимаем оплату</span>
+          <div class="flex items-center gap-4">
+            <!-- Payment partner 1: Click -->
+            <div class="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg border border-white/10">
+              <div class="w-7 h-7 bg-sky-400 rounded-lg flex items-center justify-center">
+                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <span class="text-sm font-bold text-white">Click</span>
+            </div>
+            <!-- Payment partner 2: Payme -->
+            <div class="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg border border-white/10">
+              <div class="w-7 h-7 bg-emerald-400 rounded-lg flex items-center justify-center">
+                <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="text-sm font-bold text-white">Payme</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="flex -space-x-2">
+            <div class="w-8 h-8 rounded-full bg-primary-400 border-2 border-slate-900"></div>
+            <div class="w-8 h-8 rounded-full bg-accent-400 border-2 border-slate-900"></div>
+            <div class="w-8 h-8 rounded-full bg-sky-400 border-2 border-slate-900"></div>
+            <div class="w-8 h-8 rounded-full bg-rose-400 border-2 border-slate-900"></div>
+          </div>
+          <span class="text-sm font-medium text-slate-300">Нам доверяют <span class="font-bold text-white">120+</span> бизнесов</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== HOW IT WORKS =================== -->
+  <section id="how-it-works" class="py-16 lg:py-24 bg-white">
+    <div class="max-w-container mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+        <span class="text-sm font-semibold text-primary-600 uppercase tracking-wider">Просто и быстро</span>
+        <h2 class="mt-2 text-3xl lg:text-4xl font-extrabold text-slate-900">Как это работает</h2>
+        <p class="mt-4 text-slate-600">Четыре простых шага от выбора шаблона до запуска вашего сайта</p>
+      </div>
+
+      <!-- Timeframe callout -->
+      <div class="flex justify-center mb-10 reveal">
+        <div class="inline-flex items-center gap-3 bg-accent-50 border border-accent-200 px-5 py-3 rounded-full">
+          <svg class="w-5 h-5 text-accent-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="text-sm font-bold text-accent-600">Готово за 3 дня</span>
+        </div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Step 1 -->
+        <div class="reveal text-center">
+          <div class="relative mx-auto w-16 h-16 mb-5">
+            <div class="absolute inset-0 bg-primary-100 rounded-2xl"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <svg class="w-7 h-7 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.443c.404 0 .84.205 1.084.55l.94 1.256c.244.345.68.55 1.084.55H18A2.25 2.25 0 0120.25 8.25v9A2.25 2.25 0 0118 19.5H6A2.25 2.25 0 013.75 17.25V6z" />
+              </svg>
+            </div>
+            <div class="absolute -top-2 -right-2 w-7 h-7 bg-primary-600 text-white text-sm font-bold rounded-full flex items-center justify-center">1</div>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Выберите шаблон</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Просмотрите 9 готовых шаблонов по отраслям и выберите подходящий для вашего бизнеса</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="reveal text-center">
+          <div class="relative mx-auto w-16 h-16 mb-5">
+            <div class="absolute inset-0 bg-primary-100 rounded-2xl"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <svg class="w-7 h-7 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.272.293 3.423.379.35.026.67.21.866.501L12 21l2.197-3.684a.75.75 0 01.866-.501 48.21 48.21 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.227 0-1.601-1.123-2.994-2.707-3.227A47.87 47.87 0 0012 9.75c-1.47 0-2.93.097-4.382.283-1.584.233-2.707 1.626-2.707 3.227z" />
+              </svg>
+            </div>
+            <div class="absolute -top-2 -right-2 w-7 h-7 bg-primary-600 text-white text-sm font-bold rounded-full flex items-center justify-center">2</div>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Отправьте контент</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Пришлите нам тексты, фото и контактные данные — мы всё разместим и настроим</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="reveal text-center">
+          <div class="relative mx-auto w-16 h-16 mb-5">
+            <div class="absolute inset-0 bg-primary-100 rounded-2xl"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <svg class="w-7 h-7 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div class="absolute -top-2 -right-2 w-7 h-7 bg-primary-600 text-white text-sm font-bold rounded-full flex items-center justify-center">3</div>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Мы устанавливаем</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Регистрируем домен, настраиваем хостинг, SSL и наполняем сайт вашим контентом</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="reveal text-center">
+          <div class="relative mx-auto w-16 h-16 mb-5">
+            <div class="absolute inset-0 bg-primary-100 rounded-2xl"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <svg class="w-7 h-7 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+              </svg>
+            </div>
+            <div class="absolute -top-2 -right-2 w-7 h-7 bg-primary-600 text-white text-sm font-bold rounded-full flex items-center justify-center">4</div>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Сайт работает</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Ваш сайт доступен по адресу, вы получаете админ-панель для самостоятельного редактирования</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== TEMPLATE GALLERY =================== -->
+  <section id="templates" class="py-16 lg:py-24 bg-slate-50">
+    <div class="max-w-container mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10 reveal">
+        <span class="text-sm font-semibold text-primary-600 uppercase tracking-wider">Шаблоны</span>
+        <h2 class="mt-2 text-3xl lg:text-4xl font-extrabold text-slate-900">Выберите готовый дизайн</h2>
+        <p class="mt-4 text-slate-600">9 готовых шаблонов для разных отраслей — каждый можно адаптировать под ваш бренд</p>
+      </div>
+
+      <!-- Filter tags -->
+      <div class="flex flex-wrap justify-center gap-2 mb-10 reveal" id="filterTags">
+        <button class="filter-btn active px-4 py-2 text-sm font-medium rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-primary-300 transition-colors" data-filter="all">Все</button>
+        <button class="filter-btn px-4 py-2 text-sm font-medium rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-primary-300 transition-colors" data-filter="restaurant">Ресторан</button>
+        <button class="filter-btn px-4 py-2 text-sm font-medium rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-primary-300 transition-colors" data-filter="salon">Салон</button>
+        <button class="filter-btn px-4 py-2 text-sm font-medium rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-primary-300 transition-colors" data-filter="clinic">Клиника</button>
+        <button class="filter-btn px-4 py-2 text-sm font-medium rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-primary-300 transition-colors" data-filter="retail">Магазин</button>
+        <button class="filter-btn px-4 py-2 text-sm font-medium rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-primary-300 transition-colors" data-filter="auto">Авто</button>
+        <button class="filter-btn px-4 py-2 text-sm font-medium rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-primary-300 transition-colors" data-filter="fitness">Фитнес</button>
+      </div>
+
+      <!-- Gallery grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="templateGrid">
+
+        <!-- Template 1: Restaurant -->
+        <div class="template-card bg-white rounded-2xl border border-slate-200 overflow-hidden reveal" data-category="restaurant">
+          <!-- Miniature website preview -->
+          <div class="aspect-[4/3] bg-slate-50 p-4 border-b border-slate-100">
+            <div class="h-full rounded-lg overflow-hidden border border-slate-200 shadow-sm">
+              <div class="thumb-browser-bar bg-slate-100">
+                <div class="thumb-dot bg-red-400"></div>
+                <div class="thumb-dot bg-yellow-400"></div>
+                <div class="thumb-dot bg-green-400"></div>
+              </div>
+              <div class="bg-orange-700 px-2 py-1.5 flex items-center justify-between">
+                <div class="h-1.5 w-10 bg-white/80 rounded"></div>
+                <div class="flex gap-1">
+                  <div class="h-1 w-4 bg-white/40 rounded"></div>
+                  <div class="h-1 w-4 bg-white/40 rounded"></div>
+                </div>
+              </div>
+              <div class="bg-orange-50 px-2 py-3">
+                <div class="h-1.5 w-3/4 bg-orange-300 rounded mb-1.5"></div>
+                <div class="h-1 w-1/2 bg-orange-200 rounded mb-2"></div>
+                <div class="h-3 w-16 bg-orange-600 rounded"></div>
+              </div>
+              <div class="bg-white px-2 py-2 grid grid-cols-2 gap-1.5">
+                <div class="h-8 bg-orange-100 rounded"></div>
+                <div class="h-8 bg-orange-100 rounded"></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-5">
+            <div class="flex items-center justify-between mb-1">
+              <h3 class="font-bold text-slate-900">Ресторан «Аромат»</h3>
+              <span class="text-xs text-orange-600 font-medium bg-orange-50 px-2 py-0.5 rounded">Ресторан</span>
+            </div>
+            <p class="text-sm text-slate-500 mb-4">Меню, бронирование, фото блюд</p>
+            <a href="#contact" class="inline-flex items-center justify-center w-full px-4 py-2.5 bg-primary-50 hover:bg-primary-100 text-primary-700 text-sm font-semibold rounded-lg transition-colors">
+              Выбрать
+            </a>
+          </div>
+        </div>
+
+        <!-- Template 2: Salon -->
+        <div class="template-card bg-white rounded-2xl border border-slate-200 overflow-hidden reveal" data-category="salon">
+          <div class="aspect-[4/3] bg-slate-50 p-4 border-b border-slate-100">
+            <div class="h-full rounded-lg overflow-hidden border border-slate-200 shadow-sm">
+              <div class="thumb-browser-bar bg-slate-100">
+                <div class="thumb-dot bg-red-400"></div>
+                <div class="thumb-dot bg-yellow-400"></div>
+                <div class="thumb-dot bg-green-400"></div>
+              </div>
+              <div class="bg-rose-600 px-2 py-1.5 flex items-center justify-between">
+                <div class="h-1.5 w-10 bg-white/80 rounded"></div>
+                <div class="flex gap-1">
+                  <div class="h-1 w-4 bg-white/40 rounded"></div>
+                  <div class="h-1 w-4 bg-white/40 rounded"></div>
+                </div>
+              </div>
+              <div class="bg-rose-50 px-2 py-3">
+                <div class="h-1.5 w-3/4 bg-rose-300 rounded mb-1.5"></div>
+                <div class="h-1 w-1/2 bg-rose-200 rounded mb-2"></div>
+                <div class="h-3 w-16 bg-rose-600 rounded"></div>
+              </div>
+              <div class="bg-white px-2 py-2 grid grid-cols-3 gap-1.5">
+                <div class="h-6 bg-rose-100 rounded"></div>
+                <div class="h-6 bg-rose-100 rounded"></div>
+                <div class="h-6 bg-rose-100 rounded"></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-5">
+            <div class="flex items-center justify-between mb-1">
+              <h3 class="font-bold text-slate-900">Салон «Элеганс»</h3>
+              <span class="text-xs text-rose-600 font-medium bg-rose-50 px-2 py-0.5 rounded">Салон</span>
+            </div>
+            <p class="text-sm text-slate-500 mb-4">Услуги, мастера, онлайн-запись</p>
+            <a href="#contact" class="inline-flex items-center justify-center w-full px-4 py-2.5 bg-primary-50 hover:bg-primary-100 text-primary-700 text-sm font-semibold rounded-lg transition-colors">
+              Выбрать
+            </a>
+          </div>
+        </div>
+
+        <!-- Template 3: Clinic -->
+        <div class="template-card bg-white rounded-2xl border border-slate-200 overflow-hidden reveal" data-category="clinic">
+          <div class="aspect-[4/3] bg-slate-50 p-4 border-b border-slate-100">
+            <div class="h-full rounded-lg overflow-hidden border border-slate-200 shadow-sm">
+              <div class="thumb-browser-bar bg-slate-100">
+                <div class="thumb-dot bg-red-400"></div>
+                <div class="thumb-dot bg-yellow-400"></div>
+                <div class="thumb-dot bg-green-400"></div>
+              </div>
+              <div class="bg-sky-700 px-2 py-1.5 flex items-center justify-between">
+                <div class="h-1.5 w-10 bg-white/80 rounded"></div>
+                <div class="flex gap-1">
+                  <div class="h-1 w-4 bg-white/40 rounded"></div>
+                  <div class="h-1 w-4 bg-white/40 rounded"></div>
+                </div>
+              </div>
+              <div class="bg-sky-50 px-2 py-3">
+                <div class="h-1.5 w-3/4 bg-sky-300 rounded mb-1.5"></div>
+                <div class="h-1 w-1/2 bg-sky-200 rounded mb-2"></div>
+                <div class="h-3 w-16 bg-sky-600 rounded"></div>
+              </div>
+              <div class="bg-white px-2 py-2 flex gap-1.5">
+                <div class="flex-1 h-6 bg-sky-100 rounded"></div>
+                <div class="flex-1 h-6 bg-sky-100 rounded"></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-5">
+            <div class="flex items-center justify-between mb-1">
+              <h3 class="font-bold text-slate-900">Клиника «Здоровье»</h3>
+              <span class="text-xs text-sky-600 font-medium bg-sky-50 px-2 py-0.5 rounded">Клиника</span>
+            </div>
+            <p class="text-sm text-slate-500 mb-4">Услуги, врачи, онлайн-запись</p>
+            <a href="#contact" class="inline-flex items-center justify-center w-full px-4 py-2.5 bg-primary-50 hover:bg-primary-100 text-primary-700 text-sm font-semibold rounded-lg transition-colors">
+              Выбрать
+            </a>
+          </div>
+        </div>
+
+        <!-- Template 4: Retail -->
+        <div class="template-card bg-white rounded-2xl border border-slate-200 overflow-hidden reveal" data-category="retail">
+          <div class="aspect-[4/3] bg-slate-50 p-4 border-b border-slate-100">
+            <div class="h-full rounded-lg overflow-hidden border border-slate-200 shadow-sm">
+              <div class="thumb-browser-bar bg-slate-100">
+                <div class="thumb-dot bg-red-400"></div>
+                <div class="thumb-dot bg-yellow-400"></div>
+                <div class="thumb-dot bg-green-400"></div>
+              </div>
+              <div class="bg-violet-700 px-2 py-1.5 flex items-center justify-between">
+                <div class="h-1.5 w-10 bg-white/80 rounded"></div>
+                <div class="flex gap-1">
+                  <div class="h-1 w-4 bg-white/40 rounded"></div>
+                  <div class="h-1 w-4 bg-white/40 rounded"></div>
+                </div>
+              </div>
+              <div class="bg-violet-50 px-2 py-3">
+                <div class="h-1.5 w-3/4 bg-violet-300 rounded mb-1.5"></div>
+                <div class="h-1 w-1/2 bg-violet-200 rounded mb-2"></div>
+                <div class="h-3 w-16 bg-violet-600 rounded"></div>
+              </div>
+              <div class="bg-white px-2 py-2 grid grid-cols-3 gap-1">
+                <div class="h-6 bg-violet-100 rounded"></div>
+                <div class="h-6 bg-violet-100 rounded"></div>
+                <div class="h-6 bg-violet-100 rounded"></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-5">
+            <div class="flex items-center justify-between mb-1">
+              <h3 class="font-bold text-slate-900">Магазин «Маркет»</h3>
+              <span class="text-xs text-violet-600 font-medium bg-violet-50 px-2 py-0.5 rounded">Магазин</span>
+            </div>
+            <p class="text-sm text-slate-500 mb-4">Каталог, корзина, доставка</p>
+            <a href="#contact" class="inline-flex items-center justify-center w-full px-4 py-2.5 bg-primary-50 hover:bg-primary-100 text-primary-700 text-sm font-semibold rounded-lg transition-colors">
+              Выбрать
+            </a>
+          </div>
+        </div>
+
+        <!-- Template 5: Auto -->
+        <div class="template-card bg-white rounded-2xl border border-slate-200 overflow-hidden reveal" data-category="auto">
+          <div class="aspect-[4/3] bg-slate-50 p-4 border-b border-slate-100">
+            <div class="h-full rounded-lg overflow-hidden border border-slate-200 shadow-sm">
+              <div class="thumb-browser-bar bg-slate-100">
+                <div class="thumb-dot bg-red-400"></div>
+                <div class="thumb-dot bg-yellow-400"></div>
+                <div class="thumb-dot bg-green-400"></div>
+              </div>
+              <div class="bg-slate-800 px-2 py-1.5 flex items-center justify-between">
+                <div class="h-1.5 w-10 bg-white/80 rounded"></div>
+                <div class="flex gap-1">
+                  <div class="h-1 w-4 bg-white/40 rounded"></div>
+                  <div class="h-1 w-4 bg-white/40 rounded"></div>
+                </div>
+              </div>
+              <div class="bg-slate-100 px-2 py-3">
+                <div class="h-1.5 w-3/4 bg-slate-400 rounded mb-1.5"></div>
+                <div class="h-1 w-1/2 bg-slate-300 rounded mb-2"></div>
+                <div class="h-3 w-16 bg-slate-700 rounded"></div>
+              </div>
+              <div class="bg-white px-2 py-2 grid grid-cols-2 gap-1.5">
+                <div class="h-6 bg-slate-200 rounded"></div>
+                <div class="h-6 bg-slate-200 rounded"></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-5">
+            <div class="flex items-center justify-between mb-1">
+              <h3 class="font-bold text-slate-900">Авто «Моторс»</h3>
+              <span class="text-xs text-slate-600 font-medium bg-slate-100 px-2 py-0.5 rounded">Авто</span>
+            </div>
+            <p class="text-sm text-slate-500 mb-4">Услуги, цены, запись</p>
+            <a href="#contact" class="inline-flex items-center justify-center w-full px-4 py-2.5 bg-primary-50 hover:bg-primary-100 text-primary-700 text-sm font-semibold rounded-lg transition-colors">
+              Выбрать
+            </a>
+          </div>
+        </div>
+
+        <!-- Template 6: Fitness -->
+        <div class="template-card bg-white rounded-2xl border border-slate-200 overflow-hidden reveal" data-category="fitness">
+          <div class="aspect-[4/3] bg-slate-50 p-4 border-b border-slate-100">
+            <div class="h-full rounded-lg overflow-hidden border border-slate-200 shadow-sm">
+              <div class="thumb-browser-bar bg-slate-100">
+                <div class="thumb-dot bg-red-400"></div>
+                <div class="thumb-dot bg-yellow-400"></div>
+                <div class="thumb-dot bg-green-400"></div>
+              </div>
+              <div class="bg-lime-600 px-2 py-1.5 flex items-center justify-between">
+                <div class="h-1.5 w-10 bg-white/80 rounded"></div>
+                <div class="flex gap-1">
+                  <div class="h-1 w-4 bg-white/40 rounded"></div>
+                  <div class="h-1 w-4 bg-white/40 rounded"></div>
+                </div>
+              </div>
+              <div class="bg-lime-50 px-2 py-3">
+                <div class="h-1.5 w-3/4 bg-lime-300 rounded mb-1.5"></div>
+                <div class="h-1 w-1/2 bg-lime-200 rounded mb-2"></div>
+                <div class="h-3 w-16 bg-lime-600 rounded"></div>
+              </div>
+              <div class="bg-white px-2 py-2 grid grid-cols-2 gap-1.5">
+                <div class="h-6 bg-lime-100 rounded"></div>
+                <div class="h-6 bg-lime-100 rounded"></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-5">
+            <div class="flex items-center justify-between mb-1">
+              <h3 class="font-bold text-slate-900">Фитнес «Энергия»</h3>
+              <span class="text-xs text-lime-600 font-medium bg-lime-50 px-2 py-0.5 rounded">Фитнес</span>
+            </div>
+            <p class="text-sm text-slate-500 mb-4">Абонементы, расписание, тренеры</p>
+            <a href="#contact" class="inline-flex items-center justify-center w-full px-4 py-2.5 bg-primary-50 hover:bg-primary-100 text-primary-700 text-sm font-semibold rounded-lg transition-colors">
+              Выбрать
+            </a>
+          </div>
+        </div>
+
+        <!-- Template 7: Restaurant 2 -->
+        <div class="template-card bg-white rounded-2xl border border-slate-200 overflow-hidden reveal" data-category="restaurant">
+          <div class="aspect-[4/3] bg-slate-50 p-4 border-b border-slate-100">
+            <div class="h-full rounded-lg overflow-hidden border border-slate-200 shadow-sm">
+              <div class="thumb-browser-bar bg-slate-100">
+                <div class="thumb-dot bg-red-400"></div>
+                <div class="thumb-dot bg-yellow-400"></div>
+                <div class="thumb-dot bg-green-400"></div>
+              </div>
+              <div class="bg-amber-800 px-2 py-1.5 flex items-center justify-between">
+                <div class="h-1.5 w-10 bg-white/80 rounded"></div>
+                <div class="flex gap-1">
+                  <div class="h-1 w-4 bg-white/40 rounded"></div>
+                  <div class="h-1 w-4 bg-white/40 rounded"></div>
+                </div>
+              </div>
+              <div class="bg-amber-50 px-2 py-3">
+                <div class="h-1.5 w-3/4 bg-amber-300 rounded mb-1.5"></div>
+                <div class="h-1 w-1/2 bg-amber-200 rounded mb-2"></div>
+                <div class="h-3 w-16 bg-amber-700 rounded"></div>
+              </div>
+              <div class="bg-white px-2 py-2 grid grid-cols-2 gap-1.5">
+                <div class="h-6 bg-amber-100 rounded"></div>
+                <div class="h-6 bg-amber-100 rounded"></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-5">
+            <div class="flex items-center justify-between mb-1">
+              <h3 class="font-bold text-slate-900">Кафе «Уют»</h3>
+              <span class="text-xs text-amber-600 font-medium bg-amber-50 px-2 py-0.5 rounded">Ресторан</span>
+            </div>
+            <p class="text-sm text-slate-500 mb-4">Меню, доставка, отзывы</p>
+            <a href="#contact" class="inline-flex items-center justify-center w-full px-4 py-2.5 bg-primary-50 hover:bg-primary-100 text-primary-700 text-sm font-semibold rounded-lg transition-colors">
+              Выбрать
+            </a>
+          </div>
+        </div>
+
+        <!-- Template 8: Salon 2 -->
+        <div class="template-card bg-white rounded-2xl border border-slate-200 overflow-hidden reveal" data-category="salon">
+          <div class="aspect-[4/3] bg-slate-50 p-4 border-b border-slate-100">
+            <div class="h-full rounded-lg overflow-hidden border border-slate-200 shadow-sm">
+              <div class="thumb-browser-bar bg-slate-100">
+                <div class="thumb-dot bg-red-400"></div>
+                <div class="thumb-dot bg-yellow-400"></div>
+                <div class="thumb-dot bg-green-400"></div>
+              </div>
+              <div class="bg-fuchsia-700 px-2 py-1.5 flex items-center justify-between">
+                <div class="h-1.5 w-10 bg-white/80 rounded"></div>
+                <div class="flex gap-1">
+                  <div class="h-1 w-4 bg-white/40 rounded"></div>
+                  <div class="h-1 w-4 bg-white/40 rounded"></div>
+                </div>
+              </div>
+              <div class="bg-fuchsia-50 px-2 py-3">
+                <div class="h-1.5 w-3/4 bg-fuchsia-300 rounded mb-1.5"></div>
+                <div class="h-1 w-1/2 bg-fuchsia-200 rounded mb-2"></div>
+                <div class="h-3 w-16 bg-fuchsia-600 rounded"></div>
+              </div>
+              <div class="bg-white px-2 py-2 grid grid-cols-3 gap-1">
+                <div class="h-6 bg-fuchsia-100 rounded"></div>
+                <div class="h-6 bg-fuchsia-100 rounded"></div>
+                <div class="h-6 bg-fuchsia-100 rounded"></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-5">
+            <div class="flex items-center justify-between mb-1">
+              <h3 class="font-bold text-slate-900">Студия «Стиль»</h3>
+              <span class="text-xs text-fuchsia-600 font-medium bg-fuchsia-50 px-2 py-0.5 rounded">Салон</span>
+            </div>
+            <p class="text-sm text-slate-500 mb-4">Портфолио, услуги, цены</p>
+            <a href="#contact" class="inline-flex items-center justify-center w-full px-4 py-2.5 bg-primary-50 hover:bg-primary-100 text-primary-700 text-sm font-semibold rounded-lg transition-colors">
+              Выбрать
+            </a>
+          </div>
+        </div>
+
+        <!-- Template 9: Clinic 2 -->
+        <div class="template-card bg-white rounded-2xl border border-slate-200 overflow-hidden reveal" data-category="clinic">
+          <div class="aspect-[4/3] bg-slate-50 p-4 border-b border-slate-100">
+            <div class="h-full rounded-lg overflow-hidden border border-slate-200 shadow-sm">
+              <div class="thumb-browser-bar bg-slate-100">
+                <div class="thumb-dot bg-red-400"></div>
+                <div class="thumb-dot bg-yellow-400"></div>
+                <div class="thumb-dot bg-green-400"></div>
+              </div>
+              <div class="bg-teal-700 px-2 py-1.5 flex items-center justify-between">
+                <div class="h-1.5 w-10 bg-white/80 rounded"></div>
+                <div class="flex gap-1">
+                  <div class="h-1 w-4 bg-white/40 rounded"></div>
+                  <div class="h-1 w-4 bg-white/40 rounded"></div>
+                </div>
+              </div>
+              <div class="bg-teal-50 px-2 py-3">
+                <div class="h-1.5 w-3/4 bg-teal-300 rounded mb-1.5"></div>
+                <div class="h-1 w-1/2 bg-teal-200 rounded mb-2"></div>
+                <div class="h-3 w-16 bg-teal-600 rounded"></div>
+              </div>
+              <div class="bg-white px-2 py-2 flex gap-1.5">
+                <div class="flex-1 h-6 bg-teal-100 rounded"></div>
+                <div class="flex-1 h-6 bg-teal-100 rounded"></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-5">
+            <div class="flex items-center justify-between mb-1">
+              <h3 class="font-bold text-slate-900">Стоматология «Дента»</h3>
+              <span class="text-xs text-teal-600 font-medium bg-teal-50 px-2 py-0.5 rounded">Клиника</span>
+            </div>
+            <p class="text-sm text-slate-500 mb-4">Услуги, цены, отзывы</p>
+            <a href="#contact" class="inline-flex items-center justify-center w-full px-4 py-2.5 bg-primary-50 hover:bg-primary-100 text-primary-700 text-sm font-semibold rounded-lg transition-colors">
+              Выбрать
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== WHAT'S INCLUDED =================== -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-container mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+        <span class="text-sm font-semibold text-primary-600 uppercase tracking-wider">Что входит</span>
+        <h2 class="mt-2 text-3xl lg:text-4xl font-extrabold text-slate-900">Всё включено в одну цену</h2>
+        <p class="mt-4 text-slate-600">Никаких скрытых платежей — вы получаете всё необходимое для работы сайта</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4 max-w-4xl mx-auto">
+        <!-- Domain -->
+        <div class="flex items-start gap-4 p-6 bg-slate-50 rounded-2xl reveal">
+          <div class="shrink-0 w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center">
+            <svg class="w-5 h-5 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-900 mb-1">Домен .uz</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">Регистрация и продление доменного имени на ваш бизнес в зоне .uz включены в годовую стоимость</p>
+          </div>
+        </div>
+
+        <!-- Hosting -->
+        <div class="flex items-start gap-4 p-6 bg-slate-50 rounded-2xl reveal">
+          <div class="shrink-0 w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center">
+            <svg class="w-5 h-5 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9 2.7M5.25 8.25c0-.66.18-1.28.5-1.81M5.25 8.25c0 .66.18 1.28.5 1.81" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-900 mb-1">Хостинг</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">Надёжный хостинг с высокой доступностью и быстрой загрузкой страниц для посетителей</p>
+          </div>
+        </div>
+
+        <!-- SSL -->
+        <div class="flex items-start gap-4 p-6 bg-slate-50 rounded-2xl reveal">
+          <div class="shrink-0 w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center">
+            <svg class="w-5 h-5 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-900 mb-1">SSL-сертификат</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">Бесплатный SSL-сертификат — ваш сайт работает по защищённому HTTPS-протоколу</p>
+          </div>
+        </div>
+
+        <!-- Admin panel -->
+        <div class="flex items-start gap-4 p-6 bg-slate-50 rounded-2xl reveal">
+          <div class="shrink-0 w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center">
+            <svg class="w-5 h-5 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-900 mb-1">Админ-панель</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">Удобная панель управления — меняйте тексты, фото и цены на сайте без программиста</p>
+          </div>
+        </div>
+
+        <!-- Support -->
+        <div class="flex items-start gap-4 p-6 bg-slate-50 rounded-2xl reveal">
+          <div class="shrink-0 w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center">
+            <svg class="w-5 h-5 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-900 mb-1">Поддержка</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">Техническая поддержка по телефону и Telegram — помогаем с любыми вопросами по сайту</p>
+          </div>
+        </div>
+
+        <!-- Renewal -->
+        <div class="flex items-start gap-4 p-6 bg-slate-50 rounded-2xl reveal">
+          <div class="shrink-0 w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center">
+            <svg class="w-5 h-5 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-900 mb-1">Условия продления</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">Продление на следующий год — те же $200. Домен и хостинг автоматически продлеваются</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== COMPARISON =================== -->
+  <section class="py-16 lg:py-24 bg-slate-50">
+    <div class="max-w-container mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+        <span class="text-sm font-semibold text-primary-600 uppercase tracking-wider">Сравнение</span>
+        <h2 class="mt-2 text-3xl lg:text-4xl font-extrabold text-slate-900">Почему мы выгоднее</h2>
+        <p class="mt-4 text-slate-600">Сравнение с самостоятельным созданием сайта и заказом у фрилансера</p>
+      </div>
+
+      <!-- Desktop table -->
+      <div class="hidden lg:block max-w-5xl mx-auto reveal">
+        <div class="grid grid-cols-4 gap-0">
+          <!-- Header row -->
+          <div class="p-6"></div>
+          <div class="p-6 bg-slate-100 rounded-l-2xl">
+            <h3 class="font-bold text-slate-700 text-lg">Сделать самому</h3>
+            <p class="text-sm text-slate-500 mt-1">Конструктор сайтов</p>
+          </div>
+          <div class="p-6 bg-slate-100 rounded-r-2xl">
+            <h3 class="font-bold text-slate-700 text-lg">Фрилансер</h3>
+            <p class="text-sm text-slate-500 mt-1">Заказ у частника</p>
+          </div>
+          <div class="p-6 bg-primary-600 text-white rounded-2xl compare-highlight">
+            <h3 class="font-bold text-lg">osonSAYT</h3>
+            <p class="text-sm text-primary-100 mt-1">Наш сервис</p>
+          </div>
+
+          <!-- Row: Price -->
+          <div class="p-6 border-b border-slate-200 font-medium text-slate-700">Цена</div>
+          <div class="p-6 border-b border-slate-200 text-slate-600">$100-300/год + ваше время</div>
+          <div class="p-6 border-b border-slate-200 text-slate-600">$500-2000 + хостинг</div>
+          <div class="p-6 border-b border-primary-200 bg-primary-50 text-slate-900 font-semibold">$200/год — всё включено</div>
+
+          <!-- Row: Speed -->
+          <div class="p-6 border-b border-slate-200 font-medium text-slate-700">Срок запуска</div>
+          <div class="p-6 border-b border-slate-200 text-slate-600">1-4 недели</div>
+          <div class="p-6 border-b border-slate-200 text-slate-600">2-8 недель</div>
+          <div class="p-6 border-b border-primary-200 bg-primary-50 text-slate-900 font-semibold">3 дня</div>
+
+          <!-- Row: Support -->
+          <div class="p-6 border-b border-slate-200 font-medium text-slate-700">Поддержка</div>
+          <div class="p-6 border-b border-slate-200">
+            <div class="flex items-center gap-2 text-error-500">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+              <span class="text-sm text-slate-500">Только базовая</span>
+            </div>
+          </div>
+          <div class="p-6 border-b border-slate-200">
+            <div class="flex items-center gap-2 text-error-500">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+              <span class="text-sm text-slate-500">Часто пропадает</span>
+            </div>
+          </div>
+          <div class="p-6 border-b border-primary-200 bg-primary-50">
+            <div class="flex items-center gap-2 text-success-600">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+              <span class="text-sm font-semibold text-slate-900">Постоянная по Telegram</span>
+            </div>
+          </div>
+
+          <!-- Row: Ease of edits -->
+          <div class="p-6 font-medium text-slate-700">Удобство редактирования</div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 text-warning-500">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.0 2.624 1.5 2.624h15.606c1.5 0 2.366-1.124 1.5-2.624M12 3v.75m6.75 12v.75m-13.5 0v.75" /></svg>
+              <span class="text-sm text-slate-500">Сложный интерфейс</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 text-error-500">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+              <span class="text-sm text-slate-500">Нужно звать фрилансера</span>
+            </div>
+          </div>
+          <div class="p-6 bg-primary-50 rounded-b-2xl">
+            <div class="flex items-center gap-2 text-success-600">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+              <span class="text-sm font-semibold text-slate-900">Простая админ-панель</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile stacked cards -->
+      <div class="lg:hidden space-y-6 reveal">
+        <!-- DIY -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-6">
+          <h3 class="font-bold text-slate-700 text-lg mb-4">Сделать самому</h3>
+          <div class="space-y-3 text-sm">
+            <div class="flex justify-between"><span class="text-slate-500">Цена</span><span class="text-slate-700">$100-300/год + время</span></div>
+            <div class="flex justify-between"><span class="text-slate-500">Срок</span><span class="text-slate-700">1-4 недели</span></div>
+            <div class="flex justify-between"><span class="text-slate-500">Поддержка</span><span class="text-slate-700">Базовая</span></div>
+            <div class="flex justify-between"><span class="text-slate-500">Редактирование</span><span class="text-slate-700">Сложно</span></div>
+          </div>
+        </div>
+        <!-- Freelancer -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-6">
+          <h3 class="font-bold text-slate-700 text-lg mb-4">Фрилансер</h3>
+          <div class="space-y-3 text-sm">
+            <div class="flex justify-between"><span class="text-slate-500">Цена</span><span class="text-slate-700">$500-2000 + хостинг</span></div>
+            <div class="flex justify-between"><span class="text-slate-500">Срок</span><span class="text-slate-700">2-8 недель</span></div>
+            <div class="flex justify-between"><span class="text-slate-500">Поддержка</span><span class="text-slate-700">Часто пропадает</span></div>
+            <div class="flex justify-between"><span class="text-slate-500">Редактирование</span><span class="text-slate-700">Через фрилансера</span></div>
+          </div>
+        </div>
+        <!-- osonSAYT -->
+        <div class="bg-primary-600 text-white rounded-2xl p-6 compare-highlight">
+          <h3 class="font-bold text-lg mb-4">osonSAYT</h3>
+          <div class="space-y-3 text-sm">
+            <div class="flex justify-between"><span class="text-primary-100">Цена</span><span class="font-semibold">$200/год — всё включено</span></div>
+            <div class="flex justify-between"><span class="text-primary-100">Срок</span><span class="font-semibold">3 дня</span></div>
+            <div class="flex justify-between"><span class="text-primary-100">Поддержка</span><span class="font-semibold">Постоянная</span></div>
+            <div class="flex justify-between"><span class="text-primary-100">Редактирование</span><span class="font-semibold">Простая панель</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== TESTIMONIALS =================== -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-container mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+        <span class="text-sm font-semibold text-primary-600 uppercase tracking-wider">Отзывы</span>
+        <h2 class="mt-2 text-3xl lg:text-4xl font-extrabold text-slate-900">Что говорят клиенты</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Testimonial 1 -->
+        <div class="bg-slate-50 rounded-2xl p-6 reveal">
+          <div class="flex items-center gap-1 mb-4">
+            <svg class="w-5 h-5 text-accent-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg class="w-5 h-5 text-accent-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg class="w-5 h-5 text-accent-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg class="w-5 h-5 text-accent-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg class="w-5 h-5 text-accent-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <p class="text-slate-700 leading-relaxed mb-6">«Заказал сайт для своего ресторана. Через 3 дня уже принимал заказы онлайн. Очень доволен — всё работает чётко, а админ-панель настолько простая, что менеджер сам обновляет меню.»</p>
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-full bg-orange-200 flex items-center justify-center text-orange-700 font-bold text-lg">А</div>
+            <div>
+              <div class="font-semibold text-slate-900">Алишер Каримов</div>
+              <div class="text-sm text-slate-500">Ресторан «Аромат», Ташкент</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-slate-50 rounded-2xl p-6 reveal">
+          <div class="flex items-center gap-1 mb-4">
+            <svg class="w-5 h-5 text-accent-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg class="w-5 h-5 text-accent-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg class="w-5 h-5 text-accent-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg class="w-5 h-5 text-accent-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg class="w-5 h-5 text-accent-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <p class="text-slate-700 leading-relaxed mb-6">«Раньше платила фрилансеру за каждое изменение. Теперь сама редактирую цены и услуги через панель. Экономлю деньги и время. Поддержка отвечает быстро в Telegram.»</p>
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-full bg-rose-200 flex items-center justify-center text-rose-700 font-bold text-lg">М</div>
+            <div>
+              <div class="font-semibold text-slate-900">Малика Юсупова</div>
+              <div class="text-sm text-slate-500">Салон «Элеганс», Самарканд</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-slate-50 rounded-2xl p-6 reveal">
+          <div class="flex items-center gap-1 mb-4">
+            <svg class="w-5 h-5 text-accent-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg class="w-5 h-5 text-accent-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg class="w-5 h-5 text-accent-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg class="w-5 h-5 text-accent-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg class="w-5 h-5 text-accent-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <p class="text-slate-700 leading-relaxed mb-6">«Сайт для клиники запустили за 3 дня. Пациенты теперь записываются онлайн. Лучшее вложение $200 за год — окупилось за первый месяц.»</p>
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-full bg-sky-200 flex items-center justify-center text-sky-700 font-bold text-lg">Д</div>
+            <div>
+              <div class="font-semibold text-slate-900">Доктор Рахимов</div>
+              <div class="text-sm text-slate-500">Клиника «Здоровье», Бухара</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== PRICING =================== -->
+  <section id="pricing" class="py-16 lg:py-24 bg-gradient-to-b from-primary-50 to-white">
+    <div class="max-w-container mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+        <span class="text-sm font-semibold text-primary-600 uppercase tracking-wider">Цены</span>
+        <h2 class="mt-2 text-3xl lg:text-4xl font-extrabold text-slate-900">Простая и честная цена</h2>
+        <p class="mt-4 text-slate-600">Одна цена — всё включено. Без скрытых платежей и доплат.</p>
+      </div>
+
+      <div class="max-w-md mx-auto reveal">
+        <div class="bg-white rounded-3xl shadow-xl shadow-primary-900/10 border border-slate-200 overflow-hidden">
+          <!-- Header band -->
+          <div class="bg-primary-600 px-8 py-6 text-center">
+            <span class="inline-block px-3 py-1 bg-white/20 text-white text-xs font-semibold rounded-full mb-3">Годовой план</span>
+            <div class="flex items-end justify-center gap-1">
+              <span class="text-5xl font-extrabold text-white">$200</span>
+              <span class="text-lg text-primary-100 mb-1.5">/год</span>
+            </div>
+            <p class="text-sm text-primary-100 mt-2">Всё включено — без доплат</p>
+          </div>
+
+          <!-- Features -->
+          <div class="p-8">
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-success-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <span class="text-sm text-slate-700">Домен .uz включён в стоимость</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-success-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <span class="text-sm text-slate-700">Хостинг на весь год</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-success-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <span class="text-sm text-slate-700">SSL-сертификат (HTTPS)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-success-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <span class="text-sm text-slate-700">Админ-панель для самостоятельного редактирования</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-success-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <span class="text-sm text-slate-700">Техническая поддержка по Telegram</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-success-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <span class="text-sm text-slate-700">Установка и настройка за 3 дня</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-success-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <span class="text-sm text-slate-700">Полное право владения кодом — без блокировки</span>
+              </li>
+            </ul>
+
+            <a href="#contact" class="flex items-center justify-center gap-2 w-full px-6 py-4 bg-primary-600 hover:bg-primary-700 text-white text-base font-semibold rounded-xl transition-colors shadow-lg shadow-primary-600/20">
+              Заказать сайт
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+            </a>
+            <p class="text-center text-xs text-slate-400 mt-4">Продление на следующий год — те же $200</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== FAQ =================== -->
+  <section id="faq" class="py-16 lg:py-24 bg-white">
+    <div class="max-w-container mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+        <span class="text-sm font-semibold text-primary-600 uppercase tracking-wider">FAQ</span>
+        <h2 class="mt-2 text-3xl lg:text-4xl font-extrabold text-slate-900">Частые вопросы</h2>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-3" id="faqList">
+        <!-- FAQ 1 -->
+        <div class="faq-item bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden reveal">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 p-6 text-left" type="button">
+            <span class="font-semibold text-slate-900">Что входит в стоимость $200 за год?</span>
+            <svg class="faq-chevron w-5 h-5 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="text-slate-600 leading-relaxed">В стоимость входит регистрация домена в зоне .uz, хостинг на весь год, SSL-сертификат, установка и настройка сайта, админ-панель для самостоятельного редактирования, а также техническая поддержка по телефону и Telegram. Никаких скрытых доплат — цена окончательная.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden reveal">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 p-6 text-left" type="button">
+            <span class="font-semibold text-slate-900">Сколько времени занимает создание сайта?</span>
+            <svg class="faq-chevron w-5 h-5 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="text-slate-600 leading-relaxed">Сайт готов за 3 дня после получения от вас контента — текстов, фотографий и контактных данных. Мы регистрируем домен, настраиваем хостинг, SSL и наполняем сайт вашим содержимым.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden reveal">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 p-6 text-left" type="button">
+            <span class="font-semibold text-slate-900">Могу ли я сам редактировать сайт?</span>
+            <svg class="faq-chevron w-5 h-5 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="text-slate-600 leading-relaxed">Да, вы получаете удобную админ-панель, через которую можете самостоятельно менять тексты, фотографии, цены и контактные данные — без программиста. Интерфейс панели интуитивно понятен, а если возникнут вопросы — поддержка поможет в Telegram.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden reveal">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 p-6 text-left" type="button">
+            <span class="font-semibold text-slate-900">Что если я захочу уйти от вас? Смогу ли я сохранить свой сайт?</span>
+            <svg class="faq-chevron w-5 h-5 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="text-slate-600 leading-relaxed">Да, безусловно. Мы не привязываем вас к себе — вы полностью владеете своим сайтом и кодом. Если решите уйти, мы передадим вам все исходные файлы, и вы сможете перенести сайт на любой другой хостинг. Никакой блокировки, никаких скрытых условий. Ваш сайт — ваша собственность.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden reveal">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 p-6 text-left" type="button">
+            <span class="font-semibold text-slate-900">Что происходит после истечения года?</span>
+            <svg class="faq-chevron w-5 h-5 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="text-slate-600 leading-relaxed">Продление на следующий год стоит те же $200. Мы заранее уведомим вас о необходимости продления по Telegram и телефону. Домен и хостинг продлеваются автоматически после оплаты — ваш сайт продолжит работать без перерывов.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden reveal">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 p-6 text-left" type="button">
+            <span class="font-semibold text-slate-900">Можно ли изменить шаблон под мой бренд?</span>
+            <svg class="faq-chevron w-5 h-5 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="text-slate-600 leading-relaxed">Да, каждый шаблон адаптируется под ваш бренд — мы подбираем цвета, шрифты и структуру страниц под вашу сферу бизнеса. Вы также можете менять контент через админ-панель в любой момент после запуска.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== CONTACT FORM =================== -->
+  <section id="contact" class="py-16 lg:py-24 bg-slate-900 relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute -top-40 -right-40 w-96 h-96 bg-primary-600 rounded-full opacity-10 blur-3xl"></div>
+      <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-primary-500 rounded-full opacity-10 blur-3xl"></div>
+    </div>
+    <div class="relative max-w-container mx-auto px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Left: text -->
+        <div class="reveal">
+          <span class="text-sm font-semibold text-primary-400 uppercase tracking-wider">Связаться с нами</span>
+          <h2 class="mt-2 text-3xl lg:text-4xl font-extrabold text-white">Закажите сайт сегодня</h2>
+          <p class="mt-4 text-slate-400 leading-relaxed max-w-md">Оставьте заявку — мы свяжемся с вами в течение дня, подберём шаблон и ответим на все вопросы. Без обязательств.</p>
+
+          <div class="mt-8 space-y-4">
+            <div class="flex items-center gap-3 text-slate-300">
+              <div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg>
+              </div>
+              <a href="tel:+998901234567" class="text-sm font-medium hover:text-white transition-colors">+998 90 123 45 67</a>
+            </div>
+            <div class="flex items-center gap-3 text-slate-300">
+              <div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+              </div>
+              <a href="mailto:info@osonsayt.uz" class="text-sm font-medium hover:text-white transition-colors">info@osonsayt.uz</a>
+            </div>
+            <div class="flex items-center gap-3 text-slate-300">
+              <div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-primary-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.225l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.603.295l.213-3.054 5.56-5.022c.242-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.643.135-.953l11.566-4.458c.538-.196 1.006.128.831.941z"/></svg>
+              </div>
+              <a href="https://t.me/osonsayt" target="_blank" rel="noopener" class="text-sm font-medium hover:text-white transition-colors">@osonsayt в Telegram</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: form -->
+        <div class="reveal">
+          <div class="bg-white rounded-3xl p-6 lg:p-8 shadow-2xl">
+            <form method="POST" action="/submit-lead/" class="space-y-5">
+              <!-- Django CSRF token placeholder -->
+              <!-- {% csrf_token %} -->
+
+              <!-- Name -->
+              <div>
+                <label for="name" class="block text-sm font-medium text-slate-700 mb-2">Ваше имя *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Введите ваше имя"
+                  class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                />
+              </div>
+
+              <!-- Phone -->
+              <div>
+                <label for="phone" class="block text-sm font-medium text-slate-700 mb-2">Телефон *</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  placeholder="+998 90 123 45 67"
+                  class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                />
+              </div>
+
+              <!-- Business type dropdown -->
+              <div>
+                <label for="business_type" class="block text-sm font-medium text-slate-700 mb-2">Тип бизнеса</label>
+                <select
+                  id="business_type"
+                  name="business_type"
+                  class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                >
+                  <option value="">Выберите тип бизнеса</option>
+                  <option value="restaurant">Ресторан / Кафе</option>
+                  <option value="salon">Салон красоты</option>
+                  <option value="clinic">Клиника / Медицина</option>
+                  <option value="retail">Магазин / Розница</option>
+                  <option value="auto">Автосервис / Авто</option>
+                  <option value="fitness">Фитнес / Спорт</option>
+                  <option value="other">Другое</option>
+                </select>
+              </div>
+
+              <!-- Message -->
+              <div>
+                <label for="message" class="block text-sm font-medium text-slate-700 mb-2">Сообщение</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="3"
+                  placeholder="Расскажите о вашем бизнесе и пожеланиях к сайту"
+                  class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all resize-none"
+                ></textarea>
+              </div>
+
+              <!-- Submit buttons -->
+              <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                <button
+                  type="submit"
+                  class="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold rounded-xl transition-colors shadow-lg shadow-primary-600/20"
+                >
+                  Заказать сайт
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+                </button>
+                <a
+                  href="https://t.me/osonsayt"
+                  target="_blank"
+                  rel="noopener"
+                  class="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-sky-50 hover:bg-sky-100 text-sky-600 text-sm font-semibold rounded-xl border border-sky-200 transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.225l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.603.295l.213-3.054 5.56-5.022c.242-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.643.135-.953l11.566-4.458c.538-.196 1.006.128.831.941z"/></svg>
+                  Написать в Telegram
+                </a>
+              </div>
+
+              <!-- Success/error message area (Django can populate this) -->
+              <!-- {% if messages %}{% for message in messages %}<div class="mt-4 p-3 rounded-lg text-sm {{ message.tags }}">{{ message }}</div>{% endfor %}{% endif %} -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== FOOTER =================== -->
+  <footer class="bg-slate-950 text-slate-400">
+    <div class="max-w-container mx-auto px-6 lg:px-8 py-12 lg:py-16">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <!-- Brand -->
+        <div class="lg:col-span-1">
+          <a href="#" class="flex items-center gap-2 mb-4">
+            <div class="w-9 h-9 rounded-lg bg-primary-600 flex items-center justify-center">
+              <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h12A2.25 2.25 0 0120.25 6v12A2.25 2.25 0 0118 20.25H6A2.25 2.25 0 013.75 18V6zM3.75 9h16.5M9 3.75v16.5" />
+              </svg>
+            </div>
+            <span class="text-xl font-extrabold text-white tracking-tight">oson<span class="text-primary-500">SAYT</span></span>
+          </a>
+          <p class="text-sm leading-relaxed">Создаём готовые сайты для малого и среднего бизнеса в Узбекистане. Домен, хостинг и админ-панель включены.</p>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <h4 class="font-semibold text-white mb-4 text-sm">Навигация</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#templates" class="hover:text-primary-400 transition-colors">Шаблоны</a></li>
+            <li><a href="#pricing" class="hover:text-primary-400 transition-colors">Цены</a></li>
+            <li><a href="#how-it-works" class="hover:text-primary-400 transition-colors">Как это работает</a></li>
+            <li><a href="#faq" class="hover:text-primary-400 transition-colors">FAQ</a></li>
+            <li><a href="#contact" class="hover:text-primary-400 transition-colors">Заказать сайт</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="font-semibold text-white mb-4 text-sm">Контакты</h4>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-primary-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg>
+              <a href="tel:+998901234567" class="hover:text-primary-400 transition-colors">+998 90 123 45 67</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-primary-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+              <a href="mailto:info@osonsayt.uz" class="hover:text-primary-400 transition-colors">info@osonsayt.uz</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-primary-500 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.225l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.603.295l.213-3.054 5.56-5.022c.242-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.643.135-.953l11.566-4.458c.538-.196 1.006.128.831.941z"/></svg>
+              <a href="https://t.me/osonsayt" target="_blank" rel="noopener" class="hover:text-primary-400 transition-colors">@osonsayt</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social -->
+        <div>
+          <h4 class="font-semibold text-white mb-4 text-sm">Мы в соцсетях</h4>
+          <div class="flex gap-3">
+            <a href="https://t.me/osonsayt" target="_blank" rel="noopener" class="w-10 h-10 bg-white/5 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors" aria-label="Telegram">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.225l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.603.295l.213-3.054 5.56-5.022c.242-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.643.135-.953l11.566-4.458c.538-.196 1.006.128.831.941z"/></svg>
+            </a>
+            <a href="#" class="w-10 h-10 bg-white/5 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors" aria-label="Instagram">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 7.5h9m-9 0v9m0-9H7.5m9 0v9m0-9h.75m-9 0v.75m9 0v.75m-9 0h.75M16.5 16.5h-9m9 0v-9m-9 0v9m4.5-7.5a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-2.25 6.75a5.25 5.25 0 100-10.5 5.25 5.25 0 000 10.5z" /></svg>
+            </a>
+            <a href="#" class="w-10 h-10 bg-white/5 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors" aria-label="Facebook">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+          <div class="mt-4 text-xs text-slate-500">
+            <p>osonsayt.uz</p>
+            <p>Ташкент, Узбекистан</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-slate-500">© 2026 osonSAYT. Все права защищены.</p>
+        <div class="flex gap-6 text-xs text-slate-500">
+          <a href="#" class="hover:text-primary-400 transition-colors">Политика конфиденциальности</a>
+          <a href="#" class="hover:text-primary-400 transition-colors">Условия использования</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =================== JAVASCRIPT =================== -->
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    });
+
+    // FAQ accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const trigger = item.querySelector('.faq-trigger');
+      trigger.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        faqItems.forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    // Template gallery filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const templateCards = document.querySelectorAll('#templateGrid .template-card');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        templateCards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Scroll reveal animation
+    const revealElements = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    revealElements.forEach(el => observer.observe(el));
+
+    // Header shadow on scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        header.classList.add('shadow-md');
+      } else {
+        header.classList.remove('shadow-md');
+      }
+    });
+  </script>
+
+</body>
+</html>

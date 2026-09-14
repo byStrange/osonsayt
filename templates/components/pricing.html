@@ -1,0 +1,61 @@
+{% load i18n_tags %}
+<section class="py-16 lg:py-24 bg-gradient-to-b from-primary-50 to-white" id="pricing">
+<div class="max-w-container mx-auto px-6 lg:px-8">
+<div class="text-center max-w-2xl mx-auto mb-12 reveal">
+<span class="text-sm font-semibold text-primary-600 uppercase tracking-wider">{% t 'tseny' 'Цены' %}</span>
+<h2 class="mt-2 text-3xl lg:text-4xl font-extrabold text-slate-900">{% t 'prostaya_i_chestnaya_tsena' 'Простая и честная цена' %}</h2>
+<p class="mt-4 text-slate-600">{% t 'odna_tsena_vsyo_vklyucheno_bez' 'Одна цена — всё включено. Без скрытых платежей и доплат.' %}</p>
+</div>
+<div class="max-w-md mx-auto reveal">
+<div class="bg-white rounded-3xl shadow-xl shadow-primary-900/10 border border-slate-200 overflow-hidden">
+<!-- Header band -->
+<div class="bg-primary-600 px-8 py-6 text-center">
+<span class="inline-block px-3 py-1 bg-white/20 text-white text-xs font-semibold rounded-full mb-3">{% t 'godovoy_plan' 'Годовой план' %}</span>
+<div class="flex items-end justify-center gap-1">
+<span class="text-5xl font-extrabold text-white">$200</span>
+<span class="text-lg text-primary-100 mb-1.5">{% t 'god' '/год' %}</span>
+</div>
+<p class="text-sm text-primary-100 mt-2">{% t 'vsyo_vklyucheno_bez_doplat' 'Всё включено — без доплат' %}</p>
+</div>
+<!-- Features -->
+<div class="p-8">
+<ul class="space-y-4 mb-8">
+<li class="flex items-start gap-3">
+<svg class="w-5 h-5 text-success-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<span class="text-sm text-slate-700">{% t 'domen_uz_vklyuchyon_v_stoimost' 'Домен .uz включён в стоимость' %}</span>
+</li>
+<li class="flex items-start gap-3">
+<svg class="w-5 h-5 text-success-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<span class="text-sm text-slate-700">{% t 'hosting_na_ves_god' 'Хостинг на весь год' %}</span>
+</li>
+<li class="flex items-start gap-3">
+<svg class="w-5 h-5 text-success-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<span class="text-sm text-slate-700">{% t 'ssl_sertifikat_https' 'SSL-сертификат (HTTPS)' %}</span>
+</li>
+<li class="flex items-start gap-3">
+<svg class="w-5 h-5 text-success-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<span class="text-sm text-slate-700">{% t 'admin_panel_dlya_samostoyateln' 'Админ-панель для самостоятельного редактирования' %}</span>
+</li>
+<li class="flex items-start gap-3">
+<svg class="w-5 h-5 text-success-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<span class="text-sm text-slate-700">{% t 'tehnicheskaya_podderzhka_po_te' 'Техническая поддержка по Telegram' %}</span>
+</li>
+<li class="flex items-start gap-3">
+<svg class="w-5 h-5 text-success-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<span class="text-sm text-slate-700">{% t 'ustanovka_i_nastroyka_za_3_dny' 'Установка и настройка за 3 дня' %}</span>
+</li>
+<li class="flex items-start gap-3">
+<svg class="w-5 h-5 text-success-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<span class="text-sm text-slate-700">{% t 'polnoe_pravo_vladeniya_kodom_b' 'Полное право владения кодом — без блокировки' %}</span>
+</li>
+</ul>
+<a class="flex items-center justify-center gap-2 w-full px-6 py-4 bg-primary-600 hover:bg-primary-700 text-white text-base font-semibold rounded-xl transition-colors shadow-lg shadow-primary-600/20" href="#contact">
+              {% t 'zakazat_sayt' 'Заказать сайт' %}
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</a>
+<p class="text-center text-xs text-slate-400 mt-4">{% t 'prodlenie_na_sleduyuschiy_god_' 'Продление на следующий год — те же $200' %}</p>
+</div>
+</div>
+</div>
+</div>
+</section>

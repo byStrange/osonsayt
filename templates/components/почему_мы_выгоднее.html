@@ -1,0 +1,112 @@
+{% load i18n_tags %}
+<section class="py-16 lg:py-24 bg-slate-50">
+<div class="max-w-container mx-auto px-6 lg:px-8">
+<div class="text-center max-w-2xl mx-auto mb-12 reveal">
+<span class="text-sm font-semibold text-primary-600 uppercase tracking-wider">{% t 'sravnenie' 'Сравнение' %}</span>
+<h2 class="mt-2 text-3xl lg:text-4xl font-extrabold text-slate-900">{% t 'pochemu_my_vygodnee' 'Почему мы выгоднее' %}</h2>
+<p class="mt-4 text-slate-600">{% t 'sravnenie_s_samostoyatelnym_so' 'Сравнение с самостоятельным созданием сайта и заказом у фрилансера' %}</p>
+</div>
+<!-- Desktop table -->
+<div class="hidden lg:block max-w-5xl mx-auto reveal">
+<div class="grid grid-cols-4 gap-0">
+<!-- Header row -->
+<div class="p-6"></div>
+<div class="p-6 bg-slate-100 rounded-l-2xl">
+<h3 class="font-bold text-slate-700 text-lg">{% t 'sdelat_samomu' 'Сделать самому' %}</h3>
+<p class="text-sm text-slate-500 mt-1">{% t 'konstruktor_saytov' 'Конструктор сайтов' %}</p>
+</div>
+<div class="p-6 bg-slate-100 rounded-r-2xl">
+<h3 class="font-bold text-slate-700 text-lg">{% t 'frilanser' 'Фрилансер' %}</h3>
+<p class="text-sm text-slate-500 mt-1">{% t 'zakaz_u_chastnika' 'Заказ у частника' %}</p>
+</div>
+<div class="p-6 bg-primary-600 text-white rounded-2xl compare-highlight">
+<h3 class="font-bold text-lg">osonSAYT</h3>
+<p class="text-sm text-primary-100 mt-1">{% t 'nash_servis' 'Наш сервис' %}</p>
+</div>
+<!-- Row: Price -->
+<div class="p-6 border-b border-slate-200 font-medium text-slate-700">{% t 'tsena' 'Цена' %}</div>
+<div class="p-6 border-b border-slate-200 text-slate-600">{% t '100_300_god_vashe_vremya' '$100-300/год + ваше время' %}</div>
+<div class="p-6 border-b border-slate-200 text-slate-600">{% t '500_2000_hosting' '$500-2000 + хостинг' %}</div>
+<div class="p-6 border-b border-primary-200 bg-primary-50 text-slate-900 font-semibold">{% t '200_god_vsyo_vklyucheno' '$200/год — всё включено' %}</div>
+<!-- Row: Speed -->
+<div class="p-6 border-b border-slate-200 font-medium text-slate-700">{% t 'srok_zapuska' 'Срок запуска' %}</div>
+<div class="p-6 border-b border-slate-200 text-slate-600">{% t '1_4_nedeli' '1-4 недели' %}</div>
+<div class="p-6 border-b border-slate-200 text-slate-600">{% t '2_8_nedel' '2-8 недель' %}</div>
+<div class="p-6 border-b border-primary-200 bg-primary-50 text-slate-900 font-semibold">{% t '3_dnya' '3 дня' %}</div>
+<!-- Row: Support -->
+<div class="p-6 border-b border-slate-200 font-medium text-slate-700">{% t 'podderzhka' 'Поддержка' %}</div>
+<div class="p-6 border-b border-slate-200">
+<div class="flex items-center gap-2 text-error-500">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<span class="text-sm text-slate-500">{% t 'tolko_bazovaya' 'Только базовая' %}</span>
+</div>
+</div>
+<div class="p-6 border-b border-slate-200">
+<div class="flex items-center gap-2 text-error-500">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<span class="text-sm text-slate-500">{% t 'chasto_propadaet' 'Часто пропадает' %}</span>
+</div>
+</div>
+<div class="p-6 border-b border-primary-200 bg-primary-50">
+<div class="flex items-center gap-2 text-success-600">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M4.5 12.75l6 6 9-13.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<span class="text-sm font-semibold text-slate-900">{% t 'postoyannaya_po_telegram' 'Постоянная по Telegram' %}</span>
+</div>
+</div>
+<!-- Row: Ease of edits -->
+<div class="p-6 font-medium text-slate-700">{% t 'udobstvo_redaktirovaniya' 'Удобство редактирования' %}</div>
+<div class="p-6">
+<div class="flex items-center gap-2 text-warning-500">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 9v3.75m-9.303 3.376c-.866 1.5.0 2.624 1.5 2.624h15.606c1.5 0 2.366-1.124 1.5-2.624M12 3v.75m6.75 12v.75m-13.5 0v.75" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<span class="text-sm text-slate-500">{% t 'slozhnyy_interfeys' 'Сложный интерфейс' %}</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 text-error-500">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<span class="text-sm text-slate-500">{% t 'nuzhno_zvat_frilansera' 'Нужно звать фрилансера' %}</span>
+</div>
+</div>
+<div class="p-6 bg-primary-50 rounded-b-2xl">
+<div class="flex items-center gap-2 text-success-600">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M4.5 12.75l6 6 9-13.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<span class="text-sm font-semibold text-slate-900">{% t 'prostaya_admin_panel' 'Простая админ-панель' %}</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Mobile stacked cards -->
+<div class="lg:hidden space-y-6 reveal">
+<!-- DIY -->
+<div class="bg-white rounded-2xl border border-slate-200 p-6">
+<h3 class="font-bold text-slate-700 text-lg mb-4">{% t 'sdelat_samomu' 'Сделать самому' %}</h3>
+<div class="space-y-3 text-sm">
+<div class="flex justify-between"><span class="text-slate-500">{% t 'tsena' 'Цена' %}</span><span class="text-slate-700">{% t '100_300_god_vremya' '$100-300/год + время' %}</span></div>
+<div class="flex justify-between"><span class="text-slate-500">{% t 'srok' 'Срок' %}</span><span class="text-slate-700">{% t '1_4_nedeli' '1-4 недели' %}</span></div>
+<div class="flex justify-between"><span class="text-slate-500">{% t 'podderzhka' 'Поддержка' %}</span><span class="text-slate-700">{% t 'bazovaya' 'Базовая' %}</span></div>
+<div class="flex justify-between"><span class="text-slate-500">{% t 'redaktirovanie' 'Редактирование' %}</span><span class="text-slate-700">{% t 'slozhno' 'Сложно' %}</span></div>
+</div>
+</div>
+<!-- Freelancer -->
+<div class="bg-white rounded-2xl border border-slate-200 p-6">
+<h3 class="font-bold text-slate-700 text-lg mb-4">{% t 'frilanser' 'Фрилансер' %}</h3>
+<div class="space-y-3 text-sm">
+<div class="flex justify-between"><span class="text-slate-500">{% t 'tsena' 'Цена' %}</span><span class="text-slate-700">{% t '500_2000_hosting' '$500-2000 + хостинг' %}</span></div>
+<div class="flex justify-between"><span class="text-slate-500">{% t 'srok' 'Срок' %}</span><span class="text-slate-700">{% t '2_8_nedel' '2-8 недель' %}</span></div>
+<div class="flex justify-between"><span class="text-slate-500">{% t 'podderzhka' 'Поддержка' %}</span><span class="text-slate-700">{% t 'chasto_propadaet' 'Часто пропадает' %}</span></div>
+<div class="flex justify-between"><span class="text-slate-500">{% t 'redaktirovanie' 'Редактирование' %}</span><span class="text-slate-700">{% t 'cherez_frilansera' 'Через фрилансера' %}</span></div>
+</div>
+</div>
+<!-- osonSAYT -->
+<div class="bg-primary-600 text-white rounded-2xl p-6 compare-highlight">
+<h3 class="font-bold text-lg mb-4">osonSAYT</h3>
+<div class="space-y-3 text-sm">
+<div class="flex justify-between"><span class="text-primary-100">{% t 'tsena' 'Цена' %}</span><span class="font-semibold">{% t '200_god_vsyo_vklyucheno' '$200/год — всё включено' %}</span></div>
+<div class="flex justify-between"><span class="text-primary-100">{% t 'srok' 'Срок' %}</span><span class="font-semibold">{% t '3_dnya' '3 дня' %}</span></div>
+<div class="flex justify-between"><span class="text-primary-100">{% t 'podderzhka' 'Поддержка' %}</span><span class="font-semibold">{% t 'postoyannaya' 'Постоянная' %}</span></div>
+<div class="flex justify-between"><span class="text-primary-100">{% t 'redaktirovanie' 'Редактирование' %}</span><span class="font-semibold">{% t 'prostaya_panel' 'Простая панель' %}</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
