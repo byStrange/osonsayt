@@ -19,6 +19,7 @@ def home(request):
 import os
 import json
 import urllib.request
+from core.utils import get_translation
 from django.shortcuts import redirect
 from django.contrib import messages
 from django.views.decorators.http import require_POST
@@ -50,10 +51,10 @@ def submit_lead(request):
         req = urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json'})
         try:
             urllib.request.urlopen(req)
-            messages.success(request, "Ваша заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.")
+            messages.success(request, get_translation(request, "form_success", "Ваша заявка успешно отправлена! Мы свяжемся с вами в ближайшее время."))
         except Exception as e:
-            messages.error(request, "Произошла ошибка при отправке заявки. Пожалуйста, попробуйте позже или свяжитесь с нами по телефону.")
+            messages.error(request, get_translation(request, "form_error", "Произошла ошибка при отправке заявки. Пожалуйста, попробуйте позже или свяжитесь с нами по телефону."))
     else:
-        messages.error(request, "Сервис временно недоступен (не настроен Telegram).")
+        messages.error(request, get_translation(request, "form_disabled", "Сервис временно недоступен (не настроен Telegram)."))
         
     return redirect('/#contact')

@@ -1267,5 +1267,32 @@
         "ru_value": "Отзывы пока не добавлены.",
         "uz_value": "Fikr-mulohazalar hali qo'shilmagan."
     }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 142,
+    "fields": {
+        "key": "form_success",
+        "ru_value": "Ваша заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.",
+        "uz_value": "Sizning arizangiz muvaffaqiyatli yuborildi! Tez orada siz bilan bog'lanamiz."
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 143,
+    "fields": {
+        "key": "form_error",
+        "ru_value": "Произошла ошибка при отправке заявки. Пожалуйста, попробуйте позже или свяжитесь с нами по телефону.",
+        "uz_value": "Ariza yuborishda xatolik yuz berdi. Iltimos, keyinroq qayta urinib ko'ring yoki biz bilan telefon orqali bog'laning."
+    }
+},
+{
+    "model": "core.translationmessage",
+    "pk": 144,
+    "fields": {
+        "key": "form_disabled",
+        "ru_value": "Сервис временно недоступен (не настроен Telegram).",
+        "uz_value": "Xizmat vaqtincha mavjud emas (Telegram sozlanmagan)."
+    }
 }
 ]
