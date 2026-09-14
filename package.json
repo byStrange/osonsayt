@@ -1,0 +1,23 @@
+{
+  "name": "osonsayt_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./static/src/input.css -o ./static/css/output.css --minify",
+    "watch": "tailwindcss -i ./static/src/input.css -o ./static/css/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byStrange/osonsayt.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/byStrange/osonsayt/issues"
+  },
+  "homepage": "https://github.com/byStrange/osonsayt#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}
