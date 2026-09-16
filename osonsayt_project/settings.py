@@ -151,4 +151,4 @@ LANGUAGES = [
     ('ru', 'Русский'),
     ('uz', "O'zbekcha")
 ]
-LANGUAGE_CODE = 'ru'
+LANGUAGE_CODE = 'uz'

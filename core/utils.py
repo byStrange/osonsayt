@@ -2,7 +2,7 @@ from django.core.cache import cache
 from core.models import TranslationMessage
 
 def get_translation(request, key, default_text):
-    lang = getattr(request, 'LANGUAGE_CODE', 'ru') if request else 'ru'
+    lang = getattr(request, 'LANGUAGE_CODE', 'uz') if request else 'uz'
     cache_key = f"msg_{lang}_{key}"
     
     cached_value = cache.get(cache_key)
