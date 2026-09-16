@@ -1384,5 +1384,23 @@
             "ru_value": "Конструктор держит вас привязанным к своей платформе. Фрилансер может не отдать исходники. Мы передаём вам весь код — ваш сайт принадлежит вам.",
             "uz_value": "Konstruktor sizni o'z platformasiga bog'lab qo'yadi. Frilanser kodni bermasligi mumkin. Biz barcha kodlarni sizga beramiz — sayt sizga tegishli bo'ladi."
         }
+    },
+    {
+        "model": "core.translationmessage",
+        "pk": 160,
+        "fields": {
+            "key": "tehnicheskaya_podderzhka_tolko",
+            "ru_value": "Техническая поддержка",
+            "uz_value": "Texnik qo'llab-quvvatlash"
+        }
+    },
+    {
+        "model": "core.translationmessage",
+        "pk": 161,
+        "fields": {
+            "key": "tehnicheskaya_podderzhka_po_telefonu",
+            "ru_value": "Техническая поддержка по телефону — помогаем с любыми вопросами по сайту",
+            "uz_value": "Telefon orqali texnik qo'llab-quvvatlash — sayt bo'yicha har qanday savollarga yordam beramiz"
+        }
     }
 ]
