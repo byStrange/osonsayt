@@ -19,7 +19,7 @@
           class="faq-trigger w-full flex items-center justify-between gap-4 p-6 text-left"
           type="button"
         >
-          <span class="font-semibold text-slate-900">{{ faq.question }}</span>
+          <span class="font-semibold text-slate-900">{{ faq.translated_question }}</span>
           <svg
             class="faq-chevron w-5 h-5 text-slate-400 shrink-0"
             fill="none"
@@ -36,7 +36,7 @@
         </button>
         <div class="faq-answer px-6">
           <p class="text-slate-600 leading-relaxed">
-            {{ faq.answer|linebreaksbr }}
+            {{ faq.translated_answer|linebreaksbr }}
           </p>
         </div>
       </div>

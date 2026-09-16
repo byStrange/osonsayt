@@ -27,27 +27,27 @@
           {% endfor %}
         </div>
         <p class="text-slate-700 leading-relaxed mb-6">
-          «{{ testimonial.quote }}»
+          «{{ testimonial.translated_quote }}»
         </p>
         <div class="flex items-center gap-3">
           {% if testimonial.photo %}
           <img
             src="{{ testimonial.photo.url }}"
-            alt="{{ testimonial.author }}"
+            alt="{{ testimonial.translated_author }}"
             class="w-12 h-12 rounded-full object-cover"
           />
           {% else %}
           <div
             class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center text-primary-700 font-bold text-lg"
           >
-            {{ testimonial.author|make_list|first|upper }}
+            {{ testimonial.translated_author|make_list|first|upper }}
           </div>
           {% endif %}
           <div>
             <div class="font-semibold text-slate-900">
-              {{ testimonial.author }}
+              {{ testimonial.translated_author }}
             </div>
-            <div class="text-sm text-slate-500">{{ testimonial.role }}</div>
+            <div class="text-sm text-slate-500">{{ testimonial.translated_role }}</div>
           </div>
         </div>
       </div>

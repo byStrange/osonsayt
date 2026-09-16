@@ -15,23 +15,54 @@ class Theme(models.Model):
     description = models.CharField(max_length=255)
     category = models.ForeignKey(ThemeCategory, on_delete=models.CASCADE, related_name='themes')
     image = models.ImageField(upload_to='themes/')
+    demo_url = models.URLField(blank=True)
 
     def __str__(self):
         return self.name
 
 class Testimonial(models.Model):
     author = models.CharField(max_length=100)
+    author_uz = models.CharField(max_length=100, blank=True, null=True, verbose_name="Author (UZ)")
     role = models.CharField(max_length=100)
+    role_uz = models.CharField(max_length=100, blank=True, null=True, verbose_name="Role (UZ)")
     quote = models.TextField()
+    quote_uz = models.TextField(blank=True, null=True, verbose_name="Quote (UZ)")
     photo = models.ImageField(upload_to='testimonials/')
+
+    @property
+    def translated_author(self):
+        from django.utils.translation import get_language
+        return self.author_uz if get_language() == 'uz' and self.author_uz else self.author
+
+    @property
+    def translated_role(self):
+        from django.utils.translation import get_language
+        return self.role_uz if get_language() == 'uz' and self.role_uz else self.role
+
+    @property
+    def translated_quote(self):
+        from django.utils.translation import get_language
+        return self.quote_uz if get_language() == 'uz' and self.quote_uz else self.quote
 
     def __str__(self):
         return self.author
 
 class FAQ(models.Model):
     question = models.CharField(max_length=255)
+    question_uz = models.CharField(max_length=255, blank=True, null=True, verbose_name="Question (UZ)")
     answer = models.TextField()
+    answer_uz = models.TextField(blank=True, null=True, verbose_name="Answer (UZ)")
     order = models.IntegerField(default=0)
+
+    @property
+    def translated_question(self):
+        from django.utils.translation import get_language
+        return self.question_uz if get_language() == 'uz' and self.question_uz else self.question
+
+    @property
+    def translated_answer(self):
+        from django.utils.translation import get_language
+        return self.answer_uz if get_language() == 'uz' and self.answer_uz else self.answer
 
     class Meta:
         ordering = ['order']
