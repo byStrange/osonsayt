@@ -1,75 +1,154 @@
 {% load i18n_tags %}
 <footer class="bg-slate-950 text-slate-400">
-<div class="max-w-container mx-auto px-6 lg:px-8 py-12 lg:py-16">
-<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-<!-- Brand -->
-<div class="lg:col-span-1">
-<a class="flex items-center gap-2 mb-4" href="#">
-<div class="w-9 h-9 rounded-lg bg-primary-600 flex items-center justify-center">
-<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
-<path d="M3.75 6A2.25 2.25 0 016 3.75h12A2.25 2.25 0 0120.25 6v12A2.25 2.25 0 0118 20.25H6A2.25 2.25 0 013.75 18V6zM3.75 9h16.5M9 3.75v16.5" stroke-linecap="round" stroke-linejoin="round"></path>
-</svg>
-</div>
-<span class="text-xl font-extrabold text-white tracking-tight">oson<span class="text-primary-500">SAYT</span></span>
-</a>
-<p class="text-sm leading-relaxed">{% t 'sozdayom_gotovye_sayty_dlya_ma' 'Создаём готовые сайты для малого и среднего бизнеса в Узбекистане. Домен, хостинг и админ-панель включены.' %}</p>
-</div>
-<!-- Navigation -->
-<div>
-<h4 class="font-semibold text-white mb-4 text-sm">{% t 'navigatsiya' 'Навигация' %}</h4>
-<ul class="space-y-2 text-sm">
-<li><a class="hover:text-primary-400 transition-colors" href="#templates">{% t 'shablony' 'Шаблоны' %}</a></li>
-<li><a class="hover:text-primary-400 transition-colors" href="#pricing">{% t 'tseny' 'Цены' %}</a></li>
-<li><a class="hover:text-primary-400 transition-colors" href="#how-it-works">{% t 'kak_eto_rabotaet' 'Как это работает' %}</a></li>
-<li><a class="hover:text-primary-400 transition-colors" href="#faq">FAQ</a></li>
-<li><a class="hover:text-primary-400 transition-colors" href="#contact">{% t 'zakazat_sayt' 'Заказать сайт' %}</a></li>
-</ul>
-</div>
-<!-- Contact -->
-<div>
-<h4 class="font-semibold text-white mb-4 text-sm">{% t 'kontakty' 'Контакты' %}</h4>
-<ul class="space-y-3 text-sm">
-<li class="flex items-center gap-2">
-<svg class="w-4 h-4 text-primary-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-<a class="hover:text-primary-400 transition-colors" href="tel:{{ site_settings.phone|urlencode }}">{{ site_settings.phone }}</a>
-</li>
-<li class="flex items-center gap-2">
-<svg class="w-4 h-4 text-primary-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-<a class="hover:text-primary-400 transition-colors" href="mailto:{{ site_settings.email }}">{{ site_settings.email }}</a>
-</li>
-<li class="flex items-center gap-2">
-<svg class="w-4 h-4 text-primary-500 shrink-0" fill="currentColor" viewbox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.225l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.603.295l.213-3.054 5.56-5.022c.242-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.643.135-.953l11.566-4.458c.538-.196 1.006.128.831.941z"></path></svg>
-<a class="hover:text-primary-400 transition-colors" href="{{ site_settings.telegram }}" rel="noopener" target="_blank">Telegram</a>
-</li>
-</ul>
-</div>
-<!-- Social -->
-<div>
-<h4 class="font-semibold text-white mb-4 text-sm">{% t 'my_v_sotssetyah' 'Мы в соцсетях' %}</h4>
-<div class="flex gap-3">
-<a aria-label="Telegram" class="w-10 h-10 bg-white/5 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors" href="{{ site_settings.telegram }}" rel="noopener" target="_blank">
-<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.225l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.603.295l.213-3.054 5.56-5.022c.242-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.643.135-.953l11.566-4.458c.538-.196 1.006.128.831.941z"></path></svg>
-</a>
-<a aria-label="Instagram" class="w-10 h-10 bg-white/5 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors" href="#">
-<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M7.5 7.5h9m-9 0v9m0-9H7.5m9 0v9m0-9h.75m-9 0v.75m9 0v.75m-9 0h.75M16.5 16.5h-9m9 0v-9m-9 0v9m4.5-7.5a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-2.25 6.75a5.25 5.25 0 100-10.5 5.25 5.25 0 000 10.5z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-</a>
-<a aria-label="Facebook" class="w-10 h-10 bg-white/5 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors" href="#">
-<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
-</a>
-</div>
-<div class="mt-4 text-xs text-slate-500">
-<p>osonsayt.uz</p>
-<p>{% t 'tashkent_uzbekistan' 'Ташкент, Узбекистан' %}</p>
-</div>
-</div>
-</div>
-<!-- Copyright -->
-<div class="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-<p class="text-xs text-slate-500">{% t '2026_osonsayt_vse_prava_zaschi' '© 2026 osonSAYT. Все права защищены.' %}</p>
-<div class="flex gap-6 text-xs text-slate-500">
-<a class="hover:text-primary-400 transition-colors" href="#">{% t 'politika_konfidentsialnosti' 'Политика конфиденциальности' %}</a>
-<a class="hover:text-primary-400 transition-colors" href="#">{% t 'usloviya_ispolzovaniya' 'Условия использования' %}</a>
-</div>
-</div>
-</div>
+  <div class="max-w-container mx-auto px-6 lg:px-8 py-12 lg:py-16">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      <!-- Brand -->
+      <div class="lg:col-span-1">
+        <a class="flex items-center gap-2 mb-4" href="#">
+          <div
+            class="w-9 h-9 rounded-lg bg-primary-600 flex items-center justify-center"
+          >
+            <svg
+              class="w-5 h-5 text-white"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              viewbox="0 0 24 24"
+            >
+              <path
+                d="M3.75 6A2.25 2.25 0 016 3.75h12A2.25 2.25 0 0120.25 6v12A2.25 2.25 0 0118 20.25H6A2.25 2.25 0 013.75 18V6zM3.75 9h16.5M9 3.75v16.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </div>
+          <span class="text-xl font-extrabold text-white tracking-tight"
+            >oson<span class="text-primary-500">SAYT</span></span
+          >
+        </a>
+        <p class="text-sm leading-relaxed">
+          {% t 'sozdayom_gotovye_sayty_dlya_ma' 'Создаём готовые сайты для малого и среднего бизнеса в Узбекистане. Домен, хостинг и админ-панель включены.' %}
+        </p>
+      </div>
+      <!-- Navigation -->
+      <div>
+        <h4 class="font-semibold text-white mb-4 text-sm">
+          {% t 'navigatsiya' 'Навигация' %}
+        </h4>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a
+              class="hover:text-primary-400 transition-colors"
+              href="#templates"
+              >{% t 'shablony' 'Шаблоны' %}</a
+            >
+          </li>
+          <li>
+            <a class="hover:text-primary-400 transition-colors" href="#pricing"
+              >{% t 'tseny' 'Цены' %}</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:text-primary-400 transition-colors"
+              href="#how-it-works"
+              >{% t 'kak_eto_rabotaet' 'Как это работает' %}</a
+            >
+          </li>
+          <li>
+            <a class="hover:text-primary-400 transition-colors" href="#faq"
+              >FAQ</a
+            >
+          </li>
+          <li>
+            <a class="hover:text-primary-400 transition-colors" href="#contact"
+              >{% t 'zakazat_sayt' 'Заказать сайт' %}</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- Contact -->
+      <div>
+        <h4 class="font-semibold text-white mb-4 text-sm">
+          {% t 'kontakty' 'Контакты' %}
+        </h4>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-center gap-2">
+            <svg
+              class="w-4 h-4 text-primary-500 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+            >
+              <path
+                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+            <a
+              class="hover:text-primary-400 transition-colors"
+              href="tel:{{ site_settings.phone|urlencode }}"
+              >{{ site_settings.phone }}</a
+            >
+          </li>
+          <li class="flex items-center gap-2">
+            <svg
+              class="w-4 h-4 text-primary-500 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+            >
+              <path
+                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+            <a
+              class="hover:text-primary-400 transition-colors"
+              href="mailto:{{ site_settings.email }}"
+              >{{ site_settings.email }}</a
+            >
+          </li>
+          <li class="flex items-center gap-2">
+            <svg
+              class="w-4 h-4 text-primary-500 shrink-0"
+              fill="currentColor"
+              viewbox="0 0 24 24"
+            >
+              <path
+                d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.225l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.603.295l.213-3.054 5.56-5.022c.242-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.643.135-.953l11.566-4.458c.538-.196 1.006.128.831.941z"
+              ></path>
+            </svg>
+            <a
+              class="hover:text-primary-400 transition-colors"
+              href="{{ site_settings.telegram }}"
+              rel="noopener"
+              target="_blank"
+              >Telegram</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Copyright -->
+    <div
+      class="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4"
+    >
+      <p class="text-xs text-slate-500">
+        {% t '2026_osonsayt_vse_prava_zaschi' '© 2026 OsonSayt. Все права защищены.' %}
+      </p>
+      <div class="flex gap-6 text-xs text-slate-500">
+        <a class="hover:text-primary-400 transition-colors" href="#"
+          >{% t 'politika_konfidentsialnosti' 'Политика конфиденциальности' %}</a
+        >
+        <a class="hover:text-primary-400 transition-colors" href="#"
+          >{% t 'usloviya_ispolzovaniya' 'Условия использования' %}</a
+        >
+      </div>
+    </div>
+  </div>
 </footer>

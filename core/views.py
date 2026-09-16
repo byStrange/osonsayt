@@ -44,7 +44,7 @@ def submit_lead(request):
     bot_token = os.environ.get('TELEGRAM_BOT_TOKEN')
     
     if chat_id and bot_token:
-        text = f"🚨 <b>Новая заявка (osonSAYT)</b>\n\n"
+        text = f"🚨 <b>Новая заявка (OsonSayt)</b>\n\n"
         text += f"👤 <b>Имя:</b> {name}\n"
         text += f"📞 <b>Телефон:</b> {phone}\n"
         if message_text:

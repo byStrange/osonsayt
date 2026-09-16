@@ -1,24 +1,50 @@
 {% load i18n_tags %}
 <section class="py-16 lg:py-24 bg-white" id="faq">
-<div class="max-w-container mx-auto px-6 lg:px-8">
-<div class="text-center max-w-2xl mx-auto mb-12 reveal">
-<span class="text-sm font-semibold text-primary-600 uppercase tracking-wider">FAQ</span>
-<h2 class="mt-2 text-3xl lg:text-4xl font-extrabold text-slate-900">{% t 'chastye_voprosy' 'Частые вопросы' %}</h2>
-</div>
-<div class="max-w-3xl mx-auto space-y-3" id="faqList">
-{% for faq in faqs %}
-<div class="faq-item bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden reveal">
-<button class="faq-trigger w-full flex items-center justify-between gap-4 p-6 text-left" type="button">
-<span class="font-semibold text-slate-900">{{ faq.question }}</span>
-<svg class="faq-chevron w-5 h-5 text-slate-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M19.5 8.25l-7.5 7.5-7.5-7.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-</button>
-<div class="faq-answer px-6">
-<p class="text-slate-600 leading-relaxed">{{ faq.answer|linebreaksbr }}</p>
-</div>
-</div>
-{% empty %}
-<div class="text-center text-slate-500 py-6">{% t 'voprosy_poka_ne_dobavleny' 'Вопросы пока не добавлены.' %}</div>
-{% endfor %}
-</div>
-</div>
+  <div class="max-w-container mx-auto px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+      <span
+        class="text-sm font-semibold text-primary-600 uppercase tracking-wider"
+        >FAQ</span
+      >
+      <h2 class="mt-2 text-3xl lg:text-4xl font-extrabold text-slate-900">
+        {% t 'chastye_voprosy' 'Частые вопросы' %}
+      </h2>
+    </div>
+    <div class="max-w-3xl mx-auto space-y-3" id="faqList">
+      {% for faq in faqs %}
+      <div
+        class="faq-item bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden reveal"
+      >
+        <button
+          class="faq-trigger w-full flex items-center justify-between gap-4 p-6 text-left"
+          type="button"
+        >
+          <span class="font-semibold text-slate-900">{{ faq.question }}</span>
+          <svg
+            class="faq-chevron w-5 h-5 text-slate-400 shrink-0"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewbox="0 0 24 24"
+          >
+            <path
+              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </button>
+        <div class="faq-answer px-6">
+          <p class="text-slate-600 leading-relaxed">
+            {{ faq.answer|linebreaksbr }}
+          </p>
+        </div>
+      </div>
+      {% empty %}
+      <div class="text-center text-slate-500 py-6">
+        {% t 'voprosy_poka_ne_dobavleny' 'Вопросы пока не добавлены.' %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </section>

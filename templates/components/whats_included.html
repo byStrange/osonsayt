@@ -1,0 +1,192 @@
+{% load i18n_tags %}
+<section class="py-16 lg:py-24 bg-white">
+  <div class="max-w-container mx-auto px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+      <span
+        class="text-sm font-semibold text-primary-600 uppercase tracking-wider"
+        >{% t 'chto_vhodit' 'Что входит' %}</span
+      >
+      <h2 class="mt-2 text-3xl lg:text-4xl font-extrabold text-slate-900">
+        {% t 'vsyo_vklyucheno_v_odnu_tsenu' 'Всё включено в одну цену' %}
+      </h2>
+      <p class="mt-4 text-slate-600">
+        {% t 'nikakih_skrytyh_platezhey_vy_p' 'Никаких скрытых платежей — вы получаете всё необходимое для работы сайта' %}
+      </p>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-4 max-w-4xl mx-auto">
+      <!-- Domain -->
+      <div class="flex items-start gap-4 p-6 bg-slate-50 rounded-2xl reveal">
+        <div
+          class="shrink-0 w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center"
+        >
+          <svg
+            class="w-5 h-5 text-primary-600"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewbox="0 0 24 24"
+          >
+            <path
+              d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-bold text-slate-900 mb-1">
+            {% t 'domen_uz' 'Домен .uz' %}
+          </h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            {% t 'registratsiya_i_prodlenie_dome' 'Регистрация и продление доменного имени на ваш бизнес в зоне .uz включены в годовую стоимость' %}
+          </p>
+        </div>
+      </div>
+      <!-- Hosting -->
+      <div class="flex items-start gap-4 p-6 bg-slate-50 rounded-2xl reveal">
+        <div
+          class="shrink-0 w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center"
+        >
+          <svg
+            class="w-5 h-5 text-primary-600"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewbox="0 0 24 24"
+          >
+            <path
+              d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9 2.7M5.25 8.25c0-.66.18-1.28.5-1.81M5.25 8.25c0 .66.18 1.28.5 1.81"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-bold text-slate-900 mb-1">
+            {% t 'hosting' 'Хостинг' %}
+          </h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            {% t 'nadyozhnyy_hosting_s_vysokoy_d' 'Надёжный хостинг с высокой доступностью и быстрой загрузкой страниц для посетителей' %}
+          </p>
+        </div>
+      </div>
+      <!-- SSL -->
+      <div class="flex items-start gap-4 p-6 bg-slate-50 rounded-2xl reveal">
+        <div
+          class="shrink-0 w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center"
+        >
+          <svg
+            class="w-5 h-5 text-primary-600"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewbox="0 0 24 24"
+          >
+            <path
+              d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-bold text-slate-900 mb-1">
+            {% t 'ssl_sertifikat' 'SSL-сертификат' %}
+          </h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            {% t 'besplatnyy_ssl_sertifikat_vash' 'Бесплатный SSL-сертификат — ваш сайт работает по защищённому HTTPS-протоколу' %}
+          </p>
+        </div>
+      </div>
+      <!-- Admin panel -->
+      <div class="flex items-start gap-4 p-6 bg-slate-50 rounded-2xl reveal">
+        <div
+          class="shrink-0 w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center"
+        >
+          <svg
+            class="w-5 h-5 text-primary-600"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewbox="0 0 24 24"
+          >
+            <path
+              d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+            <path
+              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-bold text-slate-900 mb-1">
+            {% t 'admin_panel' 'Админ-панель' %}
+          </h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            {% t 'udobnaya_panel_upravleniya_men' 'Удобная панель управления — меняйте тексты, фото и цены на сайте без программиста' %}
+          </p>
+        </div>
+      </div>
+      <!-- Support -->
+      <div class="flex items-start gap-4 p-6 bg-slate-50 rounded-2xl reveal">
+        <div
+          class="shrink-0 w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center"
+        >
+          <svg
+            class="w-5 h-5 text-primary-600"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewbox="0 0 24 24"
+          >
+            <path
+              d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-bold text-slate-900 mb-1">
+            {% t 'podderzhka' 'Поддержка' %}
+          </h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            {% t 'tehnicheskaya_podderzhka_po_te' 'Техническая поддержка по телефону и Telegram — помогаем с любыми вопросами по сайту' %}
+          </p>
+        </div>
+      </div>
+      <!-- Renewal -->
+      <div class="flex items-start gap-4 p-6 bg-slate-50 rounded-2xl reveal">
+        <div
+          class="shrink-0 w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center"
+        >
+          <svg
+            class="w-5 h-5 text-primary-600"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewbox="0 0 24 24"
+          >
+            <path
+              d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-bold text-slate-900 mb-1">
+            {% t 'telegram_bot_dlya_zayavok' 'Telegram-бот для заявок' %}
+          </h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            {% t 'telegram_bot_dlya_zayavok_opisaniye' 'Каждая заявка с сайта автоматически отправляется в вашу группу в Telegram — вы не пропустите ни одного клиента' %}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
