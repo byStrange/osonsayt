@@ -1,13 +1,9 @@
 from django.contrib import admin
-from .models import ThemeCategory, Theme, Testimonial, FAQ, SiteSettings, TranslationMessage
-
-@admin.register(ThemeCategory)
-class ThemeCategoryAdmin(admin.ModelAdmin):
-    list_display = ('name', 'slug')
+from .models import Theme, Testimonial, FAQ, SiteSettings, TranslationMessage
 
 @admin.register(Theme)
 class ThemeAdmin(admin.ModelAdmin):
-    list_display = ('name', 'category', 'demo_url')
+    list_display = ('name', 'demo_url')
 
 @admin.register(Testimonial)
 class TestimonialAdmin(admin.ModelAdmin):

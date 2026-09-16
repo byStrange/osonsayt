@@ -1,19 +1,8 @@
 from django.db import models
 
-class ThemeCategory(models.Model):
-    name = models.CharField(max_length=100)
-    slug = models.CharField(max_length=100)
-
-    class Meta:
-        verbose_name_plural = "Theme Categories"
-
-    def __str__(self):
-        return self.name
-
 class Theme(models.Model):
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=255)
-    category = models.ForeignKey(ThemeCategory, on_delete=models.CASCADE, related_name='themes')
     image = models.ImageField(upload_to='themes/')
     demo_url = models.URLField(blank=True)
 
