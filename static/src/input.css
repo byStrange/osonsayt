@@ -76,6 +76,14 @@
     box-shadow: 0 12px 32px rgba(0,0,0,0.1);
   }
 
+  /* Template preview: scroll the full-page screenshot on hover */
+  .template-preview {
+    transition: object-position 4s ease-in-out;
+  }
+  .template-card:hover .template-preview {
+    object-position: bottom;
+  }
+
   /* Comparison table highlight */
   .compare-highlight {
     box-shadow: 0 0 0 2px #0D9488;

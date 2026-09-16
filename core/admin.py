@@ -7,7 +7,7 @@ class ThemeCategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Theme)
 class ThemeAdmin(admin.ModelAdmin):
-    list_display = ('name', 'category')
+    list_display = ('name', 'category', 'demo_url')
 
 @admin.register(Testimonial)
 class TestimonialAdmin(admin.ModelAdmin):

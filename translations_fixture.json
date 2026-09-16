@@ -1402,5 +1402,14 @@
             "ru_value": "Техническая поддержка по телефону — помогаем с любыми вопросами по сайту",
             "uz_value": "Telefon orqali texnik qo'llab-quvvatlash — sayt bo'yicha har qanday savollarga yordam beramiz"
         }
+    },
+    {
+        "model": "core.translationmessage",
+        "pk": 162,
+        "fields": {
+            "key": "demo",
+            "ru_value": "Демо",
+            "uz_value": "Demo"
+        }
     }
 ]
