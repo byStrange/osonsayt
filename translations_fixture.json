@@ -1411,5 +1411,14 @@
             "ru_value": "Демо",
             "uz_value": "Demo"
         }
+    },
+    {
+        "model": "core.translationmessage",
+        "pk": 163,
+        "fields": {
+            "key": "made_by",
+            "ru_value": "Создано",
+            "uz_value": "Yaratuvchi:"
+        }
     }
 ]
