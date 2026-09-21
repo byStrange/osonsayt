@@ -51,6 +51,26 @@
     transition: transform 0.3s ease;
   }
 
+  /* Rich text from the admin (privacy policy, terms) */
+  .legal-content {
+    color: theme('colors.slate.600');
+    line-height: 1.75;
+    overflow-wrap: anywhere;
+  }
+  .legal-content > * + * { margin-top: 1rem; }
+  .legal-content h2 { margin-top: 2rem; font-size: 1.5rem; font-weight: 800; color: theme('colors.slate.900'); }
+  .legal-content h3 { margin-top: 1.5rem; font-size: 1.25rem; font-weight: 700; color: theme('colors.slate.900'); }
+  .legal-content h4 { margin-top: 1.25rem; font-size: 1.05rem; font-weight: 700; color: theme('colors.slate.900'); }
+  .legal-content ul { list-style: disc; padding-left: 1.5rem; }
+  .legal-content ol { list-style: decimal; padding-left: 1.5rem; }
+  .legal-content li + li { margin-top: 0.4rem; }
+  .legal-content a { color: theme('colors.primary.600'); text-decoration: underline; }
+  .legal-content a:hover { color: theme('colors.primary.700'); }
+  .legal-content strong { color: theme('colors.slate.900'); font-weight: 600; }
+  .legal-content table { width: 100%; border-collapse: collapse; }
+  .legal-content th, .legal-content td { border: 1px solid theme('colors.slate.200'); padding: 0.5rem 0.75rem; text-align: left; }
+  .legal-content th { background: theme('colors.slate.50'); }
+
   /* Mobile menu */
   .mobile-menu {
     max-height: 0;

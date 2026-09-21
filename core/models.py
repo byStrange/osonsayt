@@ -1,4 +1,7 @@
+from django.core.exceptions import ValidationError
 from django.db import models
+from django.urls import reverse
+from django.utils.translation import get_language
 
 class Theme(models.Model):
     name = models.CharField(max_length=100)
@@ -99,3 +102,44 @@ class TranslationMessage(models.Model):
 
     def __str__(self):
         return self.key
+
+
+class LegalPage(models.Model):
+    """Privacy policy / terms of use. One fixed row per kind, created by a migration."""
+
+    PRIVACY = 'privacy'
+    TERMS = 'terms'
+    SLUG_CHOICES = [
+        (PRIVACY, "Privacy policy"),
+        (TERMS, "Terms of use"),
+    ]
+
+    slug = models.CharField(max_length=20, choices=SLUG_CHOICES, unique=True)
+    label = models.CharField(max_length=100, verbose_name="Footer label", help_text="Link text in the footer and page title")
+    label_uz = models.CharField(max_length=100, blank=True, null=True, verbose_name="Footer label (UZ)")
+    content = models.TextField(blank=True)
+    content_uz = models.TextField(blank=True, null=True, verbose_name="Content (UZ)")
+    is_active = models.BooleanField(default=False, verbose_name="Active", help_text="Show the footer link and the page on the site")
+
+    class Meta:
+        ordering = ['id']
+        verbose_name = "Legal page"
+        verbose_name_plural = "Legal pages"
+
+    @property
+    def translated_label(self):
+        return self.label_uz if get_language() == 'uz' and self.label_uz else self.label
+
+    @property
+    def translated_content(self):
+        return self.content_uz if get_language() == 'uz' and self.content_uz else self.content
+
+    def get_absolute_url(self):
+        return reverse('legal_page', args=[self.slug])
+
+    def clean(self):
+        if self.is_active and not (self.content or '').strip():
+            raise ValidationError({'is_active': "Add the content before showing this page on the site."})
+
+    def __str__(self):
+        return self.label

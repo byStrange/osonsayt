@@ -3,11 +3,13 @@ from django.contrib.auth.admin import GroupAdmin as BaseGroupAdmin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.models import Group, User
 from django.core.cache import cache
+from django.db import models
 from django.utils.html import format_html
 from unfold.admin import ModelAdmin
+from tinymce.widgets import TinyMCE
 from unfold.forms import AdminPasswordChangeForm, UserChangeForm, UserCreationForm
 
-from .models import FAQ, SiteSettings, Testimonial, Theme, TranslationMessage
+from .models import FAQ, LegalPage, SiteSettings, Testimonial, Theme, TranslationMessage
 
 
 class ActiveToggleMixin:
@@ -97,6 +99,31 @@ class FAQAdmin(ActiveToggleMixin, ModelAdmin):
         ("Русский", {'fields': ('question', 'answer')}),
         ("O'zbekcha", {'fields': ('question_uz', 'answer_uz')}),
     )
+
+
+@admin.register(LegalPage)
+class LegalPageAdmin(ActiveToggleMixin, ModelAdmin):
+    # Only the two fixed pages exist, so bulk actions are pointless and would
+    # bypass the "content required before activating" validation.
+    actions = None
+    list_display = ('label', 'slug', 'is_active')
+    list_display_links = ('label',)
+    # The pages are created by a migration; the admin only edits them.
+    formfield_overrides = {models.TextField: {'widget': TinyMCE}}
+    fieldsets = (
+        (None, {'fields': ('slug', 'is_active')}),
+        ("Русский", {'fields': ('label', 'content')}),
+        ("O'zbekcha", {'fields': ('label_uz', 'content_uz')}),
+    )
+
+    def get_readonly_fields(self, request, obj=None):
+        return ('slug',)
+
+    def has_add_permission(self, request):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
 
 
 @admin.register(SiteSettings)

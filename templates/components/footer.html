@@ -5,7 +5,7 @@
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
       <!-- Brand -->
       <div class="lg:col-span-1">
-        <a class="flex items-center gap-2 mb-4" href="#">
+        <a class="flex items-center gap-2 mb-4" href="{{ anchor_base }}#">
           <span class="text-2xl font-extrabold tracking-tight">Oson<span class="text-primary-600">Sayt</span></span>
         </a>
         <p class="text-sm leading-relaxed">
@@ -22,32 +22,32 @@
           <li>
             <a
               class="hover:text-primary-400 transition-colors"
-              href="#templates"
+              href="{{ anchor_base }}#templates"
               >{% t 'shablony' 'Шаблоны' %}</a
             >
           </li>
           {% endif %}
           <li>
-            <a class="hover:text-primary-400 transition-colors" href="#pricing"
+            <a class="hover:text-primary-400 transition-colors" href="{{ anchor_base }}#pricing"
               >{% t 'tseny' 'Цены' %}</a
             >
           </li>
           <li>
             <a
               class="hover:text-primary-400 transition-colors"
-              href="#how-it-works"
+              href="{{ anchor_base }}#how-it-works"
               >{% t 'kak_eto_rabotaet' 'Как это работает' %}</a
             >
           </li>
           {% if faqs %}
           <li>
-            <a class="hover:text-primary-400 transition-colors" href="#faq"
+            <a class="hover:text-primary-400 transition-colors" href="{{ anchor_base }}#faq"
               >FAQ</a
             >
           </li>
           {% endif %}
           <li>
-            <a class="hover:text-primary-400 transition-colors" href="#contact"
+            <a class="hover:text-primary-400 transition-colors" href="{{ anchor_base }}#contact"
               >{% t 'zakazat_sayt' 'Заказать сайт' %}</a
             >
           </li>
@@ -116,14 +116,15 @@
           <img src="{% static 'img/trigger-logo.svg' %}" alt="Trigger" class="h-4 w-auto">
         </a>
       </div>
+      {% if legal_pages %}
       <div class="flex gap-6 text-xs text-slate-500">
-        <a class="hover:text-primary-400 transition-colors" href="#"
-          >{% t 'politika_konfidentsialnosti' 'Политика конфиденциальности' %}</a
+        {% for page in legal_pages %}
+        <a class="hover:text-primary-400 transition-colors" href="{{ page.get_absolute_url }}"
+          >{{ page.translated_label }}</a
         >
-        <a class="hover:text-primary-400 transition-colors" href="#"
-          >{% t 'usloviya_ispolzovaniya' 'Условия использования' %}</a
-        >
+        {% endfor %}
       </div>
+      {% endif %}
     </div>
   </div>
 </footer>

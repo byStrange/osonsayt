@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}{{ page.translated_label }} — OsonSayt{% endblock %}
+{% block content %}
+{% include 'components/header.html' %}
+<main class="bg-white py-12 lg:py-20">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8">
+    <h1 class="text-3xl lg:text-4xl font-extrabold text-slate-900 mb-8">{{ page.translated_label }}</h1>
+    <div class="legal-content">{{ page.translated_content|safe }}</div>
+  </div>
+</main>
+{% include 'components/footer.html' %}
+{% endblock %}

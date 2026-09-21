@@ -1,17 +1,28 @@
-from django.shortcuts import render
-from .models import Theme, Testimonial, FAQ, SiteSettings
+from django.shortcuts import get_object_or_404, render
+from .models import Theme, Testimonial, FAQ, LegalPage, SiteSettings
+
+def _shared_context():
+    """Data used by the header and footer, which are rendered on every public page."""
+    return {
+        'site_settings': SiteSettings.objects.first(),
+        'themes': Theme.objects.filter(is_active=True),
+        'faqs': FAQ.objects.filter(is_active=True),
+        'legal_pages': LegalPage.objects.filter(is_active=True),
+    }
 
 def home(request):
-    settings = SiteSettings.objects.first()
-    themes = Theme.objects.filter(is_active=True)
-    testimonials = Testimonial.objects.filter(is_active=True)
-    faqs = FAQ.objects.filter(is_active=True)
-    
     return render(request, 'home.html', {
-        'site_settings': settings,
-        'themes': themes,
-        'testimonials': testimonials,
-        'faqs': faqs,
+        **_shared_context(),
+        'testimonials': Testimonial.objects.filter(is_active=True),
+    })
+
+def legal_page(request, slug):
+    page = get_object_or_404(LegalPage, slug=slug, is_active=True)
+    return render(request, 'legal_page.html', {
+        **_shared_context(),
+        'page': page,
+        # Header/footer section links point to the landing page, not this one.
+        'anchor_base': '/',
     })
 
 import os

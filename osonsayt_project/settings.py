@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'unfold.contrib.forms',
 
     'core',
+    'tinymce',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -158,6 +159,20 @@ LANGUAGES = [
 LANGUAGE_CODE = 'uz'
 
 
+# Rich text editor (django-tinymce, TinyMCE is served from the package's static files)
+TINYMCE_DEFAULT_CONFIG = {
+    "license_key": "gpl",
+    "promotion": False,
+    "height": 480,
+    "menubar": False,
+    "browser_spellcheck": True,
+    "plugins": "autolink,lists,link,charmap,searchreplace,code,fullscreen,table,wordcount",
+    "toolbar": "undo redo | blocks | bold italic underline | bullist numlist outdent indent | "
+    "link table | alignleft aligncenter | removeformat code fullscreen",
+    "block_formats": "Paragraph=p; Heading 2=h2; Heading 3=h3; Heading 4=h4",
+}
+
+
 # Admin (django-unfold)
 # https://unfoldadmin.com/docs/
 
@@ -227,6 +242,11 @@ UNFOLD = {
                         "title": _("FAQ"),
                         "icon": "help",
                         "link": reverse_lazy("admin:core_faq_changelist"),
+                    },
+                    {
+                        "title": _("Legal pages"),
+                        "icon": "gavel",
+                        "link": reverse_lazy("admin:core_legalpage_changelist"),
                     },
                 ],
             },
