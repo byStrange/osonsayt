@@ -14,41 +14,49 @@ THEMES = [
         'slug': 'auto-service',
         'name': 'Автосервис',
         'description': 'Услуги, цены, мастера и онлайн-запись на ремонт',
+        'description_uz': "Xizmatlar, narxlar, ustalar va ta'mirlashga onlayn yozilish",
     },
     {
         'slug': 'legal',
         'name': 'Юридические услуги',
         'description': 'Практики, команда юристов, тарифы и консультации',
+        'description_uz': "Yo'nalishlar, yuristlar jamoasi, tariflar va maslahatlar",
     },
     {
         'slug': 'beauty',
         'name': 'Салон красоты',
         'description': 'Услуги, мастера, портфолио и онлайн-запись',
+        'description_uz': "Xizmatlar, ustalar, portfolio va onlayn yozilish",
     },
     {
         'slug': 'bozor',
         'name': 'Интернет-магазин',
         'description': 'Каталог товаров, акции, доставка и заявки',
+        'description_uz': "Mahsulotlar katalogi, aksiyalar, yetkazib berish va buyurtmalar",
     },
     {
         'slug': 'real-estate',
         'name': 'Недвижимость',
         'description': 'Объекты, галерея, агенты и заявки на просмотр',
+        'description_uz': "Obyektlar, galereya, agentlar va ko'rishga arizalar",
     },
     {
         'slug': 'construction',
         'name': 'Строительство и Ремонт',
         'description': 'Услуги, портфолио, отзывы и контакты',
+        'description_uz': "Xizmatlar, portfolio, sharhlar va kontaktlar",
     },
     {
         'slug': 'education',
         'name': 'Образование',
         'description': 'Курсы, преподаватели, тарифы и отзывы',
+        'description_uz': "Kurslar, o'qituvchilar, tariflar va sharhlar",
     },
     {
         'slug': 'retail',
         'name': 'Розница',
         'description': 'Товары, услуги, акции и контакты',
+        'description_uz': "Mahsulotlar, xizmatlar, aksiyalar va kontaktlar",
     },
 ]
 
@@ -68,6 +76,7 @@ class Command(BaseCommand):
             theme = Theme(
                 name=data['name'],
                 description=data['description'],
+                description_uz=data['description_uz'],
                 demo_url=DEMO_URL.format(slug=data['slug']),
             )
             image_path = SEED_DIR / f"{data['slug']}.jpg"

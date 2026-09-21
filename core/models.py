@@ -3,10 +3,16 @@ from django.db import models
 class Theme(models.Model):
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=255)
+    description_uz = models.CharField(max_length=255, blank=True, null=True, verbose_name="Description (UZ)")
     image = models.ImageField(upload_to='themes/')
     demo_url = models.URLField(blank=True)
     order = models.PositiveIntegerField(default=0, db_index=True, verbose_name="Order")
     is_active = models.BooleanField(default=True, verbose_name="Active", help_text="Show this theme on the site")
+
+    @property
+    def translated_description(self):
+        from django.utils.translation import get_language
+        return self.description_uz if get_language() == 'uz' and self.description_uz else self.description
 
     class Meta:
         ordering = ['order', 'id']
