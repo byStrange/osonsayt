@@ -41,6 +41,10 @@ CSRF_TRUSTED_ORIGINS = [origin.strip() for origin in env_csrf_origins.split(',')
 # Application definition
 
 INSTALLED_APPS = [
+    'unfold',
+    'unfold.contrib.filters',
+    'unfold.contrib.forms',
+
     'core',
 
     'django.contrib.admin',
@@ -152,3 +156,111 @@ LANGUAGES = [
     ('uz', "O'zbekcha")
 ]
 LANGUAGE_CODE = 'uz'
+
+
+# Admin (django-unfold)
+# https://unfoldadmin.com/docs/
+
+from django.urls import reverse_lazy  # noqa: E402
+from django.utils.translation import gettext_lazy as _  # noqa: E402
+
+UNFOLD = {
+    "SITE_TITLE": "OsonSayt Admin",
+    "SITE_HEADER": "OsonSayt",
+    "SITE_SUBHEADER": _("Content management"),
+    "SITE_URL": "/",
+    "SITE_SYMBOL": "language",
+    "SHOW_HISTORY": True,
+    "SHOW_VIEW_ON_SITE": True,
+    "SHOW_LANGUAGES": True,
+    "COLORS": {
+        "primary": {
+            "50": "239 246 255",
+            "100": "219 234 254",
+            "200": "191 219 254",
+            "300": "147 197 253",
+            "400": "96 165 250",
+            "500": "59 130 246",
+            "600": "37 99 235",
+            "700": "29 78 216",
+            "800": "30 64 175",
+            "900": "30 58 138",
+            "950": "23 37 84",
+        },
+    },
+    "SIDEBAR": {
+        "show_search": True,
+        "show_all_applications": False,
+        "navigation": [
+            {
+                "title": _("Overview"),
+                "separator": False,
+                "items": [
+                    {
+                        "title": _("Dashboard"),
+                        "icon": "dashboard",
+                        "link": reverse_lazy("admin:index"),
+                    },
+                    {
+                        "title": _("Site settings"),
+                        "icon": "settings",
+                        "link": reverse_lazy("admin:core_sitesettings_changelist"),
+                    },
+                ],
+            },
+            {
+                "title": _("Content"),
+                "separator": True,
+                "collapsible": False,
+                "items": [
+                    {
+                        "title": _("Themes"),
+                        "icon": "palette",
+                        "link": reverse_lazy("admin:core_theme_changelist"),
+                    },
+                    {
+                        "title": _("Testimonials"),
+                        "icon": "reviews",
+                        "link": reverse_lazy("admin:core_testimonial_changelist"),
+                    },
+                    {
+                        "title": _("FAQ"),
+                        "icon": "help",
+                        "link": reverse_lazy("admin:core_faq_changelist"),
+                    },
+                ],
+            },
+            {
+                "title": _("Localization"),
+                "separator": True,
+                "collapsible": True,
+                "items": [
+                    {
+                        "title": _("Translations"),
+                        "icon": "translate",
+                        "link": reverse_lazy("admin:core_translationmessage_changelist"),
+                    },
+                ],
+            },
+            {
+                "title": _("Access"),
+                "separator": True,
+                "collapsible": True,
+                "items": [
+                    {
+                        "title": _("Users"),
+                        "icon": "person",
+                        "link": reverse_lazy("admin:auth_user_changelist"),
+                        "permission": lambda request: request.user.is_superuser,
+                    },
+                    {
+                        "title": _("Groups"),
+                        "icon": "group",
+                        "link": reverse_lazy("admin:auth_group_changelist"),
+                        "permission": lambda request: request.user.is_superuser,
+                    },
+                ],
+            },
+        ],
+    },
+}
