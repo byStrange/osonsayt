@@ -8,17 +8,17 @@
 <!-- =================== HOW IT WORKS =================== -->
 {% include 'components/how-it-works.html' %}
 <!-- =================== TEMPLATE GALLERY =================== -->
-{% include 'components/templates.html' %}
+{% if themes %}{% include 'components/templates.html' %}{% endif %}
 <!-- =================== WHAT'S INCLUDED =================== -->
 {% include 'components/whats_included.html' %}
 <!-- =================== COMPARISON =================== -->
 {% include 'components/why_we_better.html' %}
 <!-- =================== TESTIMONIALS =================== -->
-{% include 'components/testimonials.html' %}
+{% if testimonials %}{% include 'components/testimonials.html' %}{% endif %}
 <!-- =================== PRICING =================== -->
 {% include 'components/pricing.html' %}
 <!-- =================== FAQ =================== -->
-{% include 'components/faq.html' %}
+{% if faqs %}{% include 'components/faq.html' %}{% endif %}
 <!-- =================== CONTACT FORM =================== -->
 {% include 'components/contact.html' %}
 <!-- =================== FOOTER =================== -->
