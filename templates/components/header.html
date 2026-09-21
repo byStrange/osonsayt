@@ -52,8 +52,8 @@
   <form action="/i18n/setlang/" method="post" class="flex items-center gap-1 bg-slate-50 p-1 rounded-lg border border-slate-200">
     {% csrf_token %}
     <input name="next" type="hidden" value="{{ request.path }}">
-    <button type="submit" name="language" value="ru" class="px-3 py-1.5 text-xs font-bold rounded-md {% if request.LANGUAGE_CODE == 'ru' %}bg-white text-primary-600 shadow-sm{% else %}text-slate-500 hover:text-slate-700{% endif %}">RU</button>
-    <button type="submit" name="language" value="uz" class="px-3 py-1.5 text-xs font-bold rounded-md {% if request.LANGUAGE_CODE == 'uz' %}bg-white text-primary-600 shadow-sm{% else %}text-slate-500 hover:text-slate-700{% endif %}">UZ</button>
+      <button type="submit" name="language" value="uz" class="px-3 py-1.5 text-xs font-bold rounded-md {% if request.LANGUAGE_CODE == 'uz' %}bg-white text-primary-600 shadow-sm{% else %}text-slate-500 hover:text-slate-700{% endif %}">UZ</button>
+      <button type="submit" name="language" value="ru" class="px-3 py-1.5 text-xs font-bold rounded-md {% if request.LANGUAGE_CODE == 'ru' %}bg-white text-primary-600 shadow-sm{% else %}text-slate-500 hover:text-slate-700{% endif %}">RU</button>
   </form>
 </div>
 
