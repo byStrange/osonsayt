@@ -5,6 +5,10 @@ class Theme(models.Model):
     description = models.CharField(max_length=255)
     image = models.ImageField(upload_to='themes/')
     demo_url = models.URLField(blank=True)
+    order = models.PositiveIntegerField(default=0, db_index=True, verbose_name="Order")
+
+    class Meta:
+        ordering = ['order', 'id']
 
     def __str__(self):
         return self.name
