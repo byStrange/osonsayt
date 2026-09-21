@@ -49,7 +49,7 @@ class GroupAdmin(BaseGroupAdmin, ModelAdmin):
 class ThemeAdmin(ActiveToggleMixin, ModelAdmin):
     list_display = ('preview', 'name', 'description', 'demo_url', 'is_active')
     list_display_links = ('preview', 'name')
-    search_fields = ('name', 'description', 'description_uz')
+    search_fields = ('name', 'name_uz', 'description', 'description_uz')
     ordering = ('order', 'id')
     # Renders drag & drop handles in the changelist so the order of the themes
     # on the landing page can be changed by the admin.
@@ -58,7 +58,7 @@ class ThemeAdmin(ActiveToggleMixin, ModelAdmin):
     fieldsets = (
         (None, {'fields': ('image', 'demo_url', 'is_active')}),
         ("Русский", {'fields': ('name', 'description')}),
-        ("O'zbekcha", {'fields': ('description_uz',)}),
+        ("O'zbekcha", {'fields': ('name_uz', 'description_uz')}),
     )
 
     @admin.display(description="Preview")
