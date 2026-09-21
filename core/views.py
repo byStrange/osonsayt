@@ -3,9 +3,9 @@ from .models import Theme, Testimonial, FAQ, SiteSettings
 
 def home(request):
     settings = SiteSettings.objects.first()
-    themes = Theme.objects.all()
-    testimonials = Testimonial.objects.all()
-    faqs = FAQ.objects.all()
+    themes = Theme.objects.filter(is_active=True)
+    testimonials = Testimonial.objects.filter(is_active=True)
+    faqs = FAQ.objects.filter(is_active=True)
     
     return render(request, 'home.html', {
         'site_settings': settings,

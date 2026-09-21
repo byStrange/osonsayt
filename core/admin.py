@@ -9,6 +9,25 @@ from unfold.forms import AdminPasswordChangeForm, UserChangeForm, UserCreationFo
 
 from .models import FAQ, SiteSettings, Testimonial, Theme, TranslationMessage
 
+
+class ActiveToggleMixin:
+    """Adds an inline on/off switch in the changelist plus bulk activate actions."""
+
+    actions = ['activate_selected', 'deactivate_selected']
+    list_filter = ('is_active',)
+    list_editable = ('is_active',)
+
+    @admin.action(description="Show selected on the site")
+    def activate_selected(self, request, queryset):
+        updated = queryset.update(is_active=True)
+        self.message_user(request, f"{updated} item(s) are now visible on the site.")
+
+    @admin.action(description="Hide selected from the site")
+    def deactivate_selected(self, request, queryset):
+        updated = queryset.update(is_active=False)
+        self.message_user(request, f"{updated} item(s) are now hidden from the site.")
+
+
 # Re-register the auth models so they are styled by Unfold as well.
 admin.site.unregister(User)
 admin.site.unregister(Group)
@@ -27,8 +46,8 @@ class GroupAdmin(BaseGroupAdmin, ModelAdmin):
 
 
 @admin.register(Theme)
-class ThemeAdmin(ModelAdmin):
-    list_display = ('preview', 'name', 'description', 'demo_url')
+class ThemeAdmin(ActiveToggleMixin, ModelAdmin):
+    list_display = ('preview', 'name', 'description', 'demo_url', 'is_active')
     list_display_links = ('preview', 'name')
     search_fields = ('name', 'description')
     ordering = ('order', 'id')
@@ -49,24 +68,27 @@ class ThemeAdmin(ModelAdmin):
 
 
 @admin.register(Testimonial)
-class TestimonialAdmin(ModelAdmin):
-    list_display = ('author', 'role')
+class TestimonialAdmin(ActiveToggleMixin, ModelAdmin):
+    list_display = ('author', 'role', 'is_active')
+    list_display_links = ('author',)
     search_fields = ('author', 'author_uz', 'role', 'quote')
     fieldsets = (
-        (None, {'fields': ('photo',)}),
+        (None, {'fields': ('photo', 'is_active')}),
         ("Русский", {'fields': ('author', 'role', 'quote')}),
         ("O'zbekcha", {'fields': ('author_uz', 'role_uz', 'quote_uz')}),
     )
 
 
 @admin.register(FAQ)
-class FAQAdmin(ModelAdmin):
-    list_display = ('question', 'order')
+class FAQAdmin(ActiveToggleMixin, ModelAdmin):
+    list_display = ('question', 'order', 'is_active')
+    list_display_links = ('question',)
     search_fields = ('question', 'question_uz', 'answer')
     ordering = ('order',)
     ordering_field = 'order'
     hide_ordering_field = True
     fieldsets = (
+        (None, {'fields': ('is_active',)}),
         ("Русский", {'fields': ('question', 'answer')}),
         ("O'zbekcha", {'fields': ('question_uz', 'answer_uz')}),
     )

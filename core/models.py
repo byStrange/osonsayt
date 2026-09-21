@@ -6,6 +6,7 @@ class Theme(models.Model):
     image = models.ImageField(upload_to='themes/')
     demo_url = models.URLField(blank=True)
     order = models.PositiveIntegerField(default=0, db_index=True, verbose_name="Order")
+    is_active = models.BooleanField(default=True, verbose_name="Active", help_text="Show this theme on the site")
 
     class Meta:
         ordering = ['order', 'id']
@@ -21,6 +22,7 @@ class Testimonial(models.Model):
     quote = models.TextField()
     quote_uz = models.TextField(blank=True, null=True, verbose_name="Quote (UZ)")
     photo = models.ImageField(upload_to='testimonials/')
+    is_active = models.BooleanField(default=True, verbose_name="Active", help_text="Show this testimonial on the site")
 
     @property
     def translated_author(self):
@@ -46,6 +48,7 @@ class FAQ(models.Model):
     answer = models.TextField()
     answer_uz = models.TextField(blank=True, null=True, verbose_name="Answer (UZ)")
     order = models.IntegerField(default=0)
+    is_active = models.BooleanField(default=True, verbose_name="Active", help_text="Show this question on the site")
 
     @property
     def translated_question(self):
