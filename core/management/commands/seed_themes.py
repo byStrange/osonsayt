@@ -7,7 +7,7 @@ from django.db import transaction
 from core.models import Theme
 
 SEED_DIR = Path(__file__).resolve().parents[2] / 'seed_data' / 'themes'
-DEMO_URL = 'https://e-shop.triger.uz/?theme={slug}'
+DEMO_URL = 'https://templates.osonsayt.uz/?theme={slug}'
 
 THEMES = [
     {
