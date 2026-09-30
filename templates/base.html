@@ -6,9 +6,9 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>{% block title %}{% t 'osonsayt_sayt_dlya_vashego_biz' 'OsonSayt — Сайт для вашего бизнеса за $200/год | Домен, хостинг и админ-панель включены' %}{% endblock %}</title>
-<meta content="Создайте сайт для вашего бизнеса за $200 в год. Домен, хостинг, SSL-сертификат и админ-панель включены. Готово за 3 дня." name="description"/>
-<meta content="OsonSayt — Сайт для вашего бизнеса за $200/год" property="og:title"/>
-<meta content="Домен, хостинг, SSL и админ-панель включены. Готово за 3 дня." property="og:description"/>
+<meta content="{% block description %}{% t 'sozdayte_sayt_dlya_vashego_biz' 'Создайте сайт для вашего бизнеса за $200 в год. Домен, хостинг, SSL-сертификат и админ-панель включены. Готово за 3 дня.' %}{% endblock %}" name="description"/>
+<meta content="{% block og_title %}{% t 'osonsayt_sayt_dlya_vashego_biz_2' 'OsonSayt — Сайт для вашего бизнеса за $200/год' %}{% endblock %}" property="og:title"/>
+<meta content="{% block og_description %}{% t 'domen_hosting_ssl_i_admin_pane' 'Домен, хостинг, SSL и админ-панель включены. Готово за 3 дня.' %}{% endblock %}" property="og:description"/>
 <meta content="website" property="og:type"/>
 
 <link href="{% static 'css/output.css' %}" rel="stylesheet">
