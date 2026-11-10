@@ -35,3 +35,22 @@ class LeadTests(TestCase):
     def test_home_renders_form(self):
         html = self.client.get('/').content.decode()
         self.assertIn('name="ts"', html); self.assertIn('name="website"', html)
+
+
+class MediaServingTests(TestCase):
+    def test_media_served_with_debug_off(self):
+        import tempfile, os
+        from django.conf import settings
+        self.assertFalse(settings.DEBUG)
+        with tempfile.TemporaryDirectory() as d:
+            open(os.path.join(d, 'x.txt'), 'w').write('ok')
+            with override_settings(MEDIA_ROOT=d):
+                from django.urls import clear_url_caches
+                import importlib, osonsayt_project.urls as u
+                importlib.reload(u); clear_url_caches()
+                try:
+                    r = self.client.get('/media/x.txt')
+                    self.assertEqual(r.status_code, 200)
+                    self.assertIn(self.client.get('/media/../manage.py').status_code, (400, 404))
+                finally:
+                    importlib.reload(u); clear_url_caches()
