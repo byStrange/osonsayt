@@ -21,3 +21,6 @@ staticfiles/
 .DS_Store
 Thumbs.db
 node_modules/
+
+# Django file cache
+.cache/
