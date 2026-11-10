@@ -43,6 +43,12 @@
 <form action="/submit-lead/" class="space-y-5" method="POST">
 <!-- Django CSRF token placeholder -->
 {% csrf_token %}
+<input type="hidden" name="ts" value="{{ lead_ts }}"/>
+<!-- Honeypot: hidden from people, bots tend to fill it -->
+<div aria-hidden="true" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden">
+<label for="website">Website</label>
+<input id="website" name="website" type="text" tabindex="-1" autocomplete="off" value=""/>
+</div>
 <!-- Name -->
 <div>
 <label class="block text-sm font-medium text-slate-700 mb-2" for="name">{% t 'vashe_imya' 'Ваше имя *' %}</label>
